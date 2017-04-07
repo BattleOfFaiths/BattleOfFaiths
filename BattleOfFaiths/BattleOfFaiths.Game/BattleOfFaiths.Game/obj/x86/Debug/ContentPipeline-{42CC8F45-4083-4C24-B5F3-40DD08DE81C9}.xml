@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Fonts\font.spritefont</Source>
+      <Name>Fonts\font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Fonts\font.xnb</Output>
+      <Time>2017-04-05T15:23:54.8351493+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\bg1.jpg</Source>
+      <Name>Backgrounds\bg1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg1.xnb</Output>
+      <Time>2017-04-05T16:04:32.8751372+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\bg2.jpg</Source>
+      <Name>Backgrounds\bg2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg2.xnb</Output>
+      <Time>2017-04-05T16:04:32.8781401+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\bg3.jpg</Source>
+      <Name>Backgrounds\bg3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg3.xnb</Output>
+      <Time>2017-04-05T16:04:32.8801403+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\bg4.jpg</Source>
+      <Name>Backgrounds\bg4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg4.xnb</Output>
+      <Time>2017-04-05T16:04:32.8821417+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\main.jpg</Source>
+      <Name>Backgrounds\main</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main.xnb</Output>
+      <Time>2017-04-05T16:18:45.5400537+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\main2.jpg</Source>
+      <Name>Backgrounds\main2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main2.xnb</Output>
+      <Time>2017-04-05T16:28:59.6150969+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\main3.jpg</Source>
+      <Name>Backgrounds\main3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main3.xnb</Output>
+      <Time>2017-04-05T16:29:57.3636285+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Items\manaSprite.png</Source>
+      <Name>Sprites\Items\manaSprite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\manaSprite.xnb</Output>
+      <Time>2017-04-06T22:03:57.7008951+03:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{42CC8F45-4083-4C24-B5F3-40DD08DE81C9}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\</RootDirectory>
+      <LoggerRootDirectory>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2017-04-02T16:29:28.0416566+03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
