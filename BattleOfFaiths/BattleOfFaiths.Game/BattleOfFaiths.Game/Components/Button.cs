@@ -22,6 +22,7 @@ namespace BattleOfFaiths.Game.Components
 
         private Models.Game game;
         private Item item;
+        private Character character;
 
         private MouseState prevMouseState;
         private MouseState MouseState;
@@ -44,6 +45,13 @@ namespace BattleOfFaiths.Game.Components
             this.name = name;
             this.pos = pos;
             this.item = item;
+        }
+
+        public Button(string name, Vector2 pos, Character character)
+        {
+            this.name = name;
+            this.pos = pos;
+            this.character = character;
         }
 
         public void LoadContent(ContentManager Content)
@@ -115,7 +123,7 @@ namespace BattleOfFaiths.Game.Components
             if (item.Price <= game.Money)
             {
                 BuyIt(item.Id, game.Id);
-                DecreaseMoney(game.Id, game.Money, item.Price);
+                DecreaseMoney(game.Id, item.Price);
             }
         }
 
@@ -133,12 +141,12 @@ namespace BattleOfFaiths.Game.Components
             }
         }
 
-        private void DecreaseMoney(int gameId, int money, int price)
+        private void DecreaseMoney(int gameId, int price)
         {
             using (BattleOfFaithsEntities context = new BattleOfFaithsEntities())
             {
                 Models.Game game = context.Games.FirstOrDefault(g => g.Id == gameId);
-                var leftMoney = money - price;
+                var leftMoney = game.Money - price;
                 game.Money = leftMoney;
 
                 context.SaveChanges();
@@ -153,6 +161,7 @@ namespace BattleOfFaiths.Game.Components
         private void NewGame()
         {
             Models.Game currentGame = CreateNewGame();
+            AddCharactersToGame(currentGame);
             GameAuth.SetCurrentGame(currentGame);
             StaticBooleans.SetHasNewGame(true);
             StaticBooleans.SetIsGameMenuInitializedBool(false);
@@ -178,6 +187,17 @@ namespace BattleOfFaiths.Game.Components
                 context.SaveChanges();
 
                 return game;
+            }
+        }
+
+        private void AddCharactersToGame(Models.Game game)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var characters = context.Characters.ToList();
+                var currentGame = context.Games.FirstOrDefault(g => g.Id == game.Id);
+                currentGame.Characters = characters;
+                context.SaveChanges();
             }
         }
     }

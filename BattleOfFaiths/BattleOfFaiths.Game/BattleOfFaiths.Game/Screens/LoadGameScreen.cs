@@ -102,7 +102,7 @@ namespace BattleOfFaiths.Game.Screens
 
         private string GetCustomName(Models.Game game)
         {
-            return $"{game.Date} || Level {game.Level} || Highscore: {game.HighScore}";
+            return $"{game.Date} || Highscore: {game.HighScore}";
         }
     }
 }

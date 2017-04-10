@@ -15,8 +15,6 @@ namespace BattleOfFaiths.Game.Models
         }
         public int Id { get; set; }
         public int HighScore { get; set; }
-        public int Level { get; set; }
-        public bool HasFinished { get; set; }
         public int Money { get; set; }
         public DateTime Date { get; set; }
 

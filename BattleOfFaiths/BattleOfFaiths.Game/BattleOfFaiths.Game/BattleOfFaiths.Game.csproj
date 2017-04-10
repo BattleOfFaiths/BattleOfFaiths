@@ -84,7 +84,11 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\Bar.cs" />
+    <Compile Include="Components\CharacterBlock.cs" />
+    <Compile Include="Components\Map.cs" />
     <Compile Include="Components\ShopItem.cs" />
+    <Compile Include="Screens\FightingScreen.cs" />
     <Compile Include="Screens\GameMenu.cs" />
     <Compile Include="Screens\LoadGameScreen.cs" />
     <Compile Include="Components\Button.cs" />

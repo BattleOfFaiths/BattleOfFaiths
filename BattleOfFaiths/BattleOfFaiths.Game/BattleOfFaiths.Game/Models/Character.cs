@@ -17,6 +17,8 @@ namespace BattleOfFaiths.Game.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Sprite { get; set; }
+        public int Level { get; set; }
+        public int Highscore { get; set; }
 
         public virtual ICollection<Attack> Attacks { get; set; }
         public virtual ICollection<Characteristics> Characteristics { get; set; }
