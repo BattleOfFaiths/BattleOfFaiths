@@ -28,3 +28,33 @@ C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleO
 C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main2.xnb
 C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main3.xnb
 C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\manaSprite.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Fonts\font.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg1.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg2.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg3.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg4.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main2.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main3.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\manaSprite.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\BattleOfFaiths.Game.exe.config
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\BattleOfFaiths.Game.exe
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\BattleOfFaiths.Game.pdb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\EntityFramework.dll
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\EntityFramework.xml
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\BattleOfFaiths.Game.csprojResolveAssemblyReference.cache
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\BattleOfFaiths.Game.exe
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\BattleOfFaiths.Game.pdb

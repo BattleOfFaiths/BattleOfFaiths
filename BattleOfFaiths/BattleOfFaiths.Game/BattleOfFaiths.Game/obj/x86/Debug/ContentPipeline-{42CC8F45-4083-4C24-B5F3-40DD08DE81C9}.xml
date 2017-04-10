@@ -7,7 +7,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Fonts\font.xnb</Output>
+      <Output>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Fonts\font.xnb</Output>
       <Time>2017-04-05T15:23:54.8351493+03:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg1.xnb</Output>
+      <Output>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg1.xnb</Output>
       <Time>2017-04-05T16:04:32.8751372+03:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg2.xnb</Output>
+      <Output>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg2.xnb</Output>
       <Time>2017-04-05T16:04:32.8781401+03:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg3.xnb</Output>
+      <Output>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg3.xnb</Output>
       <Time>2017-04-05T16:04:32.8801403+03:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg4.xnb</Output>
+      <Output>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg4.xnb</Output>
       <Time>2017-04-05T16:04:32.8821417+03:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main.xnb</Output>
+      <Output>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main.xnb</Output>
       <Time>2017-04-05T16:18:45.5400537+03:00</Time>
     </Item>
     <Item>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main2.xnb</Output>
-      <Time>2017-04-05T16:28:59.6150969+03:00</Time>
+      <Output>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main2.xnb</Output>
+      <Time>2017-04-07T19:06:26.8726371+03:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\main3.jpg</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main3.xnb</Output>
-      <Time>2017-04-05T16:29:57.3636285+03:00</Time>
+      <Output>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main3.xnb</Output>
+      <Time>2017-04-07T19:05:52.7968998+03:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Items\manaSprite.png</Source>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\manaSprite.xnb</Output>
+      <Output>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\manaSprite.xnb</Output>
       <Time>2017-04-06T22:03:57.7008951+03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -89,10 +89,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\</RootDirectory>
-      <LoggerRootDirectory>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\</RootDirectory>
+      <LoggerRootDirectory>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
