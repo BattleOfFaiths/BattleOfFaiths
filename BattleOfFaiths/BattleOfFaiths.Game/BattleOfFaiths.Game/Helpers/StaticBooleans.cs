@@ -9,9 +9,16 @@ namespace BattleOfFaiths.Game.Helpers
     {
         public static bool IsLoadGamesOn;
         public static bool HasNewGame;
-
         public static bool IsShopOpen;
         public static bool IsGameMenuInitialized;
+        public static bool HasFightBeenInitialized;
+
+        public static bool MakeBasicAttack;
+
+        public static void SetHasFightBeenInitializedBool(bool value)
+        {
+            HasFightBeenInitialized = value;    
+        }
 
         public static void SetLoadGamesBool(bool value)
         {
@@ -22,7 +29,7 @@ namespace BattleOfFaiths.Game.Helpers
         {
             HasNewGame = value;
         }
-
+        
         public static void SetOpenShopBool(bool value)
         {
             IsShopOpen = value;

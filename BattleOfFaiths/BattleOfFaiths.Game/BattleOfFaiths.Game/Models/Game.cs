@@ -12,6 +12,7 @@ namespace BattleOfFaiths.Game.Models
         {
             this.Characters = new HashSet<Character>();
             this.Items = new HashSet<Item>();
+            this.Fights = new HashSet<Fight>();
         }
         public int Id { get; set; }
         public int HighScore { get; set; }
@@ -20,5 +21,6 @@ namespace BattleOfFaiths.Game.Models
 
         public virtual ICollection<Character> Characters { get; set; }
         public virtual ICollection<Item> Items { get; set; }
+        public virtual ICollection<Fight> Fights { get; set; }
     }
 }

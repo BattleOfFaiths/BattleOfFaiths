@@ -40,7 +40,7 @@ namespace BattleOfFaiths.Game
         {
             // TODO: Add your initialization logic here
             IsMouseVisible = true;
-            
+
             mainMenu.Initialize();
             base.Initialize();
         }
@@ -81,7 +81,7 @@ namespace BattleOfFaiths.Game
             // TODO: Add your update logic here
             
             base.Update(gameTime);
-            mainMenu.Update(Content);
+            mainMenu.Update(Content, gameTime);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace BattleOfFaiths.Game
 
             // TODO: Add your drawing code here
             
-            mainMenu.Draw(spriteBatch);
+            mainMenu.Draw(spriteBatch, Content);
               
             base.Draw(gameTime);
         }

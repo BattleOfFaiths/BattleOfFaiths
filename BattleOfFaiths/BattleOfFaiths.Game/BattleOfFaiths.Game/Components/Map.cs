@@ -10,7 +10,7 @@ namespace BattleOfFaiths.Game.Components
 {
     public class Map
     {
-        private Texture2D map;
+        private Texture2D mapImage;
         private Vector2 mapPosition;
         private Color color;
 
@@ -25,14 +25,12 @@ namespace BattleOfFaiths.Game.Components
             int num;
             Random rnd = new Random();
             num = rnd.Next(1, 4);
-            map = Content.Load<Texture2D>("Backgrounds/bg" + num);
+            mapImage = Content.Load<Texture2D>("Backgrounds/bg" + num);
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin();
-            spriteBatch.Draw(map, mapPosition, color);
-            spriteBatch.End();
+            spriteBatch.Draw(mapImage, mapPosition, color);
         }
     }
 }

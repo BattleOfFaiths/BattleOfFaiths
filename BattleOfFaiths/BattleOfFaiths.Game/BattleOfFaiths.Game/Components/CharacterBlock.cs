@@ -42,7 +42,7 @@ namespace BattleOfFaiths.Game.Components
         {
             fightButton.LoadContent(Content);
             font = Content.Load<SpriteFont>("Fonts/font");
-            fighterProfile = Content.Load<Texture2D>("Sprites/Items/" + character.Sprite);
+            fighterProfile = Content.Load<Texture2D>("Characters/" + character.Sprite);
         }
 
         public void Update()

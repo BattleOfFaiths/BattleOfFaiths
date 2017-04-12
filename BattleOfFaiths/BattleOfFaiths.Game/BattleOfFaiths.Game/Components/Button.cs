@@ -78,7 +78,7 @@ namespace BattleOfFaiths.Game.Components
             else
             {
                 color = new Color(0, 0, 0);
-                
+               
                 if (MouseState.LeftButton == ButtonState.Pressed && prevMouseState.LeftButton == ButtonState.Released)
                 {
                     switch (name)
@@ -92,13 +92,13 @@ namespace BattleOfFaiths.Game.Components
                         case "Statistics":
                             break;
                         case "Fight":
+                            StartFight(this.character, GameAuth.GetCurrentGame());
                             break;
                         case "Shop":
                             StaticBooleans.SetOpenShopBool(true);
                             break;
                         case "Buy":
-                            game = GameAuth.GetCurrentGame();
-                            BuyIfPossible(this.item, game);
+                            BuyIfPossible(this.item, GameAuth.GetCurrentGame());
                             break;
                         case "Close":
                             StaticBooleans.SetOpenShopBool(false);
@@ -116,6 +116,34 @@ namespace BattleOfFaiths.Game.Components
                     }
                 }
             }
+        }
+
+        private void StartFight(Character character, Models.Game game)
+        {
+            var currentFight = CreateCurrentFight(character, game);
+            FightAuth.SetCurrentFight(currentFight);
+            StaticBooleans.SetHasFightBeenInitializedBool(false);
+        }
+
+        private Fight CreateCurrentFight(Character character, Models.Game game)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentGame = context.Games.FirstOrDefault(g => g.Id == game.Id);
+                var currentCharacter = context.Characters.FirstOrDefault(c => c.Id == character.Id);
+
+                var fight = new Fight()
+                {
+                    CharacterId = currentCharacter.Id,
+                    GameId = currentGame.Id
+                };
+
+                currentGame.Fights.Add(fight);
+                context.Games.Attach(currentGame);
+                context.SaveChanges();
+
+                return fight;
+            };
         }
 
         private void BuyIfPossible(Item item, Models.Game game)

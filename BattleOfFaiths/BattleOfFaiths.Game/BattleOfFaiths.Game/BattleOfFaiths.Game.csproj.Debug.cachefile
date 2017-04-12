@@ -7,3 +7,10 @@ Content\Backgrounds\main.xnb
 Content\Backgrounds\main2.xnb
 Content\Backgrounds\main3.xnb
 Content\Sprites\Items\manaSprite.xnb
+Content\Components\hbar.xnb
+Content\Components\mbar.xnb
+Content\Characters\alucard.xnb
+Content\Animations\alucardBasic.xnb
+Content\Animations\alucardDef.xnb
+Content\Animations\alucardSpAtk.xnb
+Content\Animations\rebelBasic.xnb
