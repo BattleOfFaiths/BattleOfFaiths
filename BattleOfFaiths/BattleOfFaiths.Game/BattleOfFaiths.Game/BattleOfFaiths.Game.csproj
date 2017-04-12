@@ -94,7 +94,6 @@
     <Compile Include="Components\Map.cs" />
     <Compile Include="Components\ShopItem.cs" />
     <Compile Include="Helpers\FightAuth.cs" />
-    <Compile Include="Models\ActionAnimation.cs" />
     <Compile Include="Models\Fight.cs" />
     <Compile Include="Screens\FightingScreen.cs" />
     <Compile Include="Screens\GameMenu.cs" />
@@ -108,7 +107,6 @@
     <Compile Include="Models\CharacterAction.cs" />
     <Compile Include="Models\Bonus.cs" />
     <Compile Include="Models\Character.cs" />
-    <Compile Include="Models\Characteristics.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

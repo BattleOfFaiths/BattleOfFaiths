@@ -133,7 +133,7 @@ namespace BattleOfFaiths.Game.Screens
             using (var context = new BattleOfFaithsEntities())
             {
                 var currentCharacter = context.Characters.FirstOrDefault(c => c.Id == character.Id);
-                return currentCharacter.Characteristics.FirstOrDefault(c => c.Name == name).Value;
+                return 0; //currentCharacter.Characteristics.FirstOrDefault(c => c.Name == name).Value;
             }
         }
     }

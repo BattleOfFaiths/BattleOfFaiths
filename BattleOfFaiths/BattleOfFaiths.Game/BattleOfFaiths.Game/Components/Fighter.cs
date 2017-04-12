@@ -96,11 +96,11 @@ namespace BattleOfFaiths.Game.Components
             {
                 var currentCharacter = context.Characters.FirstOrDefault(c => c.Id == character.Id);
                 var currentAction = currentCharacter.CharacterActions.FirstOrDefault(a => a.Name == type);
-                var actionAnimation =
-                    context.ActionAnimations.FirstOrDefault(aa => aa.Id == currentAction.ActionAnimationId);
-                string spriteName = actionAnimation.Sprite;
+               // var actionAnimation =
+                  //  context.ActionAnimations.FirstOrDefault(aa => aa.Id == currentAction.ActionAnimationId);
+                //string spriteName = actionAnimation.Sprite;
 
-                return spriteName;
+                return "";// spriteName;
             }
         }
     }

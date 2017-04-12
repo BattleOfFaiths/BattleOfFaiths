@@ -99,32 +99,208 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Characters\alucard.png">
-      <Name>alucard</Name>
+    <Compile Include="Animations\Alucard\Player1\Al-Defence.png">
+      <Name>Al-Defence</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Alucard\Player1\Al-Attack.png">
+      <Name>Al-Attack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Alucard\Player1\Al-Lose.png">
+      <Name>Al-Lose</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Alucard\Player1\Al-Specattack.png">
+      <Name>Al-Specattack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Alucard\Player1\Al-Win.png">
+      <Name>Al-Win</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animations\alucardBasic.png">
-      <Name>alucardBasic</Name>
+    <Compile Include="Animations\Belmont\Player1\BelAttack.png">
+      <Name>BelAttack</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Animations\alucardDef.png">
-      <Name>alucardDef</Name>
+    <Compile Include="Animations\Belmont\Player1\BelDefence.png">
+      <Name>BelDefence</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Animations\alucardSpAtk.png">
-      <Name>alucardSpAtk</Name>
+    <Compile Include="Animations\Belmont\Player1\BelLose.png">
+      <Name>BelLose</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Belmont\Player1\BelSpecAttack.png">
+      <Name>BelSpecAttack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Belmont\Player1\BelWin.png">
+      <Name>BelWin</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animations\rebelBasic.png">
-      <Name>rebelBasic</Name>
+    <Compile Include="Animations\Alucard\Player2\Al-Defence1.png">
+      <Name>Al-Defence1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Alucard\Player2\Al-Attack1.png">
+      <Name>Al-Attack1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Alucard\Player2\Al-Lose1.png">
+      <Name>Al-Lose1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Alucard\Player2\Al-Specattack1.png">
+      <Name>Al-Specattack1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Alucard\Player2\Al-Win1.png">
+      <Name>Al-Win1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\Rabel\Player1\Attack.png">
+      <Name>Attack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Rabel\Player1\Defence.png">
+      <Name>Defence</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Rabel\Player1\Lose.png">
+      <Name>Lose</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Rabel\Player1\SpecAttack.png">
+      <Name>SpecAttack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Rabel\Player1\Win.png">
+      <Name>Win</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\Rabel\Player2\Attack1.png">
+      <Name>Attack1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Rabel\Player2\Defence1.png">
+      <Name>Defence1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Rabel\Player2\Lose1.png">
+      <Name>Lose1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Rabel\Player2\SpecAttack1.png">
+      <Name>SpecAttack1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Rabel\Player2\Win1.png">
+      <Name>Win1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\Belmont\Player2\BelAttack1.png">
+      <Name>BelAttack1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Belmont\Player2\BelDefence1.png">
+      <Name>BelDefence1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Belmont\Player2\BelLose1.png">
+      <Name>BelLose1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Belmont\Player2\BelSpecAttack1.png">
+      <Name>BelSpecAttack1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Animations\Belmont\Player2\BelWin1.png">
+      <Name>BelWin1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Characters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\Alucard\Player1\Al-Position.png">
+      <Name>Al-Position</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\Alucard\Player2\Al-Position1.png">
+      <Name>Al-Position1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\Belmont\Player1\BelPosition.png">
+      <Name>BelPosition</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\Belmont\Player2\BelPosition1.png">
+      <Name>BelPosition1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\Rabel\Player1\RabPosition.png">
+      <Name>RabPosition</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\Rabel\Player2\RabPosition1.png">
+      <Name>RabPosition1</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

@@ -1,2 +1,3 @@
 C:\softuni\Databases Advanced - Entity Framework\homework\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\obj\x86\Debug\BattleOfFaiths.GameContent.contentprojResolveAssemblyReference.cache
 C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\obj\x86\Debug\BattleOfFaiths.GameContent.contentprojResolveAssemblyReference.cache
+C:\Users\steff\Desktop\BattleOfFights\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\obj\x86\Debug\BattleOfFaiths.GameContent.contentprojResolveAssemblyReference.cache
