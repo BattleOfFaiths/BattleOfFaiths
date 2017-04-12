@@ -17,6 +17,7 @@ namespace BattleOfFaiths.Game.Screens
         private static SpriteFont font;
 
         private ShopScreen shopScreen = new ShopScreen();
+        private FightingScreen fightScreen = new FightingScreen();
 
         private Texture2D gameMenuBackgroundImage;
         private Vector2 bgPosition;
@@ -89,9 +90,17 @@ namespace BattleOfFaiths.Game.Screens
             }
         }
 
-        public void Update(ContentManager Content)
+        public void Update(ContentManager Content, GameTime gameTime)
         {
-            if (!StaticBooleans.IsShopOpen)
+            if (StaticBooleans.IsShopOpen)
+            {
+                shopScreen.Update();
+            }
+            else if (FightAuth.HasStartedFight())
+            {
+                fightScreen.Update(gameTime);
+            }
+            else 
             {
                 foreach (CharacterBlock cb in characters)
                 {
@@ -102,17 +111,23 @@ namespace BattleOfFaiths.Game.Screens
                     button.Update();
                 }
             }
-            else
-            {
-                shopScreen.Update();
-            }
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, ContentManager Content)
         {
             if (StaticBooleans.IsShopOpen)
             {
                 shopScreen.Draw(spriteBatch);
+            }
+            else if (FightAuth.HasStartedFight())
+            {
+                if (!StaticBooleans.HasFightBeenInitialized)
+                {
+                    fightScreen.Initialize();
+                    fightScreen.LoadContent(Content);
+                    StaticBooleans.SetHasFightBeenInitializedBool(true);
+                }
+                fightScreen.Draw(spriteBatch);
             }
             else
             {

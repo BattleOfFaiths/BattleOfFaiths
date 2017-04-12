@@ -58,3 +58,10 @@ C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFai
 C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\BattleOfFaiths.Game.exe
 C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\BattleOfFaiths.Game.pdb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Components\hbar.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Components\mbar.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\alucard.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\alucardBasic.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\alucardDef.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\alucardSpAtk.xnb
+C:\softuni\Project\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\rebelBasic.xnb

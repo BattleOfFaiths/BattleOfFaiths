@@ -84,10 +84,18 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation.cs" />
+    <Compile Include="Components\Attack.cs" />
     <Compile Include="Components\Bar.cs" />
     <Compile Include="Components\CharacterBlock.cs" />
+    <Compile Include="Components\DrawNames.cs" />
+    <Compile Include="Components\Enemy.cs" />
+    <Compile Include="Components\Fighter.cs" />
     <Compile Include="Components\Map.cs" />
     <Compile Include="Components\ShopItem.cs" />
+    <Compile Include="Helpers\FightAuth.cs" />
+    <Compile Include="Models\ActionAnimation.cs" />
+    <Compile Include="Models\Fight.cs" />
     <Compile Include="Screens\FightingScreen.cs" />
     <Compile Include="Screens\GameMenu.cs" />
     <Compile Include="Screens\LoadGameScreen.cs" />
@@ -97,7 +105,7 @@
     <Compile Include="Helpers\GameAuth.cs" />
     <Compile Include="Helpers\StaticBooleans.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Attack.cs" />
+    <Compile Include="Models\CharacterAction.cs" />
     <Compile Include="Models\Bonus.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\Characteristics.cs" />

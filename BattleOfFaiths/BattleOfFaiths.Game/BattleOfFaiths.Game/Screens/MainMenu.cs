@@ -86,7 +86,7 @@ namespace BattleOfFaiths.Game.Screens
             //    gameMenu.LoadContent(Content);
         }
 
-        public void Update(ContentManager Content)
+        public void Update(ContentManager Content, GameTime gameTime)
         {
             if (!StaticBooleans.IsShopOpen)
             {
@@ -108,16 +108,16 @@ namespace BattleOfFaiths.Game.Screens
                 gameMenu.LoadContent(Content);
                 StaticBooleans.SetIsGameMenuInitializedBool(true);
             }
-            if (GameAuth.HasStartedGame()) { gameMenu.Update(Content);}
+            if (GameAuth.HasStartedGame()) { gameMenu.Update(Content, gameTime);}
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, ContentManager Content)
         {
             //spriteBatch.Begin();
 
             if (GameAuth.HasStartedGame())
             {
-                gameMenu.Draw(spriteBatch);
+                gameMenu.Draw(spriteBatch, Content);
             }
             else if (StaticBooleans.IsLoadGamesOn)
             {

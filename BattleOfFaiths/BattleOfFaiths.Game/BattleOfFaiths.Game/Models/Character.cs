@@ -9,7 +9,7 @@ namespace BattleOfFaiths.Game.Models
     {
         public Character()
         {
-            this.Attacks = new HashSet<Attack>();
+            this.CharacterActions = new HashSet<CharacterAction>();
             this.Characteristics = new HashSet<Characteristics>();
             this.Games = new HashSet<Game>();
         }
@@ -20,7 +20,7 @@ namespace BattleOfFaiths.Game.Models
         public int Level { get; set; }
         public int Highscore { get; set; }
 
-        public virtual ICollection<Attack> Attacks { get; set; }
+        public virtual ICollection<CharacterAction> CharacterActions { get; set; }
         public virtual ICollection<Characteristics> Characteristics { get; set; }
         public virtual ICollection<Game> Games { get; set; }
     }

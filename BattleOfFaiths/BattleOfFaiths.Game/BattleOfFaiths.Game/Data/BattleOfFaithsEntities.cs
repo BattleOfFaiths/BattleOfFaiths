@@ -17,10 +17,12 @@ namespace BattleOfFaiths.Game.Data
 
         public virtual DbSet<Character> Characters { get; set; }
         public virtual DbSet<Characteristics> Characteristics { get; set; }
-        public virtual DbSet<Attack> Attacks { get; set; }
+        public virtual DbSet<CharacterAction> CharacterActions { get; set; }
         public virtual DbSet<Models.Game> Games { get; set; }
         public virtual DbSet<Bonus> Bonuses { get; set; }
         public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<Fight> Fights { get; set; }
+        public virtual DbSet<ActionAnimation> ActionAnimations { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -45,6 +47,11 @@ namespace BattleOfFaiths.Game.Data
                 });
 
             modelBuilder.Entity<Bonus>().ToTable("Bonuses");
+
+            modelBuilder.Entity<CharacterAction>()
+                .HasOptional(ca => ca.ActionAnimation)
+                .WithRequired(aa => aa.CharacterAction)
+                .WillCascadeOnDelete(false);
 
             base.OnModelCreating(modelBuilder);
         }
