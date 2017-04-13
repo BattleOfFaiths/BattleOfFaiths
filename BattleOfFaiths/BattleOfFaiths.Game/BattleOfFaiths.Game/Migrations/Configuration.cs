@@ -22,37 +22,37 @@ namespace BattleOfFaiths.Game.Migrations
             {
                 Name = "Health +50",
                 Price = 100,
-                Sprite = "manaSprite"
+                Sprite = "heart50"
             };
             var healtFull = new Item
             {
                 Name = "Health-Full",
                 Price = 800,
-                Sprite = "manaSprite"
+                Sprite = "heartFull"
             };
             var mana50 = new Item
             {
                 Name = "Mana +50",
                 Price = 80,
-                Sprite = "manaSprite"
+                Sprite = "mana50"
             };
             var mana100 = new Item
             {
                 Name = "Mana +100",
                 Price = 130,
-                Sprite = "manaSprite"
+                Sprite = "mana100"
             };
             var maxDef = new Item
             {
                 Name = "Max Defence",
                 Price = 750,
-                Sprite = "manaSprite"
+                Sprite = "def"
             };
             var attackBoost = new Item
             {
                 Name = "Attack +100",
                 Price = 600,
-                Sprite = "manaSprite"
+                Sprite = "Attack100"
             };
             context.Items.AddOrUpdate(i => i.Name, health50, healtFull, mana50, mana100, maxDef, attackBoost);
             context.SaveChanges();
@@ -103,7 +103,7 @@ namespace BattleOfFaiths.Game.Migrations
             var AlAttack = new CharacterAction
             {
                 Name = "Basic",
-                Sprite = "manaSprite",
+                Sprite = "BasicAttack",
                 PlayerSprite = "Al-Attack",
                 EnemySprite = "Al-Attack1",
                 CharacterId = Alucard.Id,
@@ -112,7 +112,7 @@ namespace BattleOfFaiths.Game.Migrations
             var AlAttackSpec = new CharacterAction
             {
                 Name = "Special",
-                Sprite = "manaSprite",
+                Sprite = "SpecAttack",
                 PlayerSprite = "Al-Specattack",
                 EnemySprite = "Al-Specattack1",
                 CharacterId = Alucard.Id,
@@ -145,11 +145,20 @@ namespace BattleOfFaiths.Game.Migrations
                 CharacterId = Alucard.Id,
                 Frames = 3
             };
+            var AlHit = new CharacterAction
+            {
+                Name = "Hit",
+                Sprite = "manaSprite",
+                PlayerSprite = "Al-Hit",
+                EnemySprite = "Al-Hit1",
+                CharacterId = Alucard.Id,
+                Frames = 3
+            };
             //---------------- Belmont -----------------------//
             var BelAtt = new CharacterAction
             {
                 Name = "Basic",
-                Sprite = "manaSprite",
+                Sprite = "BasicAttack",
                 PlayerSprite = "BelAttack",
                 EnemySprite = "BelAttack1",
                 CharacterId = Belmont.Id,
@@ -158,7 +167,7 @@ namespace BattleOfFaiths.Game.Migrations
             var BelAttackSpec = new CharacterAction
             {
                 Name = "Special",
-                Sprite = "manaSprite",
+                Sprite = "SpecAttack",
                 PlayerSprite = "BelSpecAttack",
                 EnemySprite = "BelSpecAttack1",
                 CharacterId = Belmont.Id,
@@ -191,11 +200,20 @@ namespace BattleOfFaiths.Game.Migrations
                 CharacterId = Belmont.Id,
                 Frames = 2
             };
+            var BelHit = new CharacterAction
+            {
+                Name = "Hit",
+                Sprite = "manaSprite",
+                PlayerSprite = "BelHit",
+                EnemySprite = "BelHit1",
+                CharacterId = Belmont.Id,
+                Frames = 3
+            };
             //-------------------- Rebel -------------------//
             var RebAtt = new CharacterAction
             {
                 Name = "Basic",
-                Sprite = "manaSprite",
+                Sprite = "BasicAttack",
                 PlayerSprite = "Attack",
                 EnemySprite = "Attack1",
                 CharacterId = Rebel.Id,
@@ -204,7 +222,7 @@ namespace BattleOfFaiths.Game.Migrations
             var RebAttackSpec = new CharacterAction
             {
                 Name = "Special",
-                Sprite = "manaSprite",
+                Sprite = "SpecAttack",
                 PlayerSprite = "SpecAttack",
                 EnemySprite = "SpecAttack1",
                 CharacterId = Rebel.Id,
@@ -237,7 +255,16 @@ namespace BattleOfFaiths.Game.Migrations
                 CharacterId = Rebel.Id,
                 Frames = 4
             };
-            context.CharacterActions.AddOrUpdate(a => a.PlayerSprite, AlAttack, AlAttackSpec, AlWin, AlLose, AlDef, BelAtt, BelAttackSpec, BelWin, BelLose, BelDef, RebAtt, RebAttackSpec, RebWin, RebLose, RebDef);
+            var RebHit = new CharacterAction
+            {
+                Name = "Hit",
+                Sprite = "manaSprite",
+                PlayerSprite = "RabHit",
+                EnemySprite = "RabHit",
+                CharacterId = Belmont.Id,
+                Frames = 3
+            };
+            context.CharacterActions.AddOrUpdate(a => a.PlayerSprite, AlAttack, AlAttackSpec, AlWin, AlLose, AlDef, AlHit, BelAtt, BelAttackSpec, BelWin, BelLose, BelDef, BelHit, RebAtt, RebAttackSpec, RebWin, RebLose, RebDef, RebHit);
             context.SaveChanges();
 
         }

@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Fonts\font.xnb</Output>
-      <Time>2017-04-13T13:00:35.404042+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Fonts\font.xnb</Output>
+      <Time>2017-04-13T20:44:05.9254315+03:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\bg1.jpg</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg1.xnb</Output>
+      <Time>2017-04-13T20:44:05.7677955+03:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\bg2.jpg</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg2.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg2.xnb</Output>
+      <Time>2017-04-13T20:44:05.7768015+03:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\bg3.jpg</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg3.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg3.xnb</Output>
+      <Time>2017-04-13T20:44:05.785808+03:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\bg4.jpg</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg4.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\bg4.xnb</Output>
+      <Time>2017-04-13T20:44:05.7928127+03:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\main.jpg</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main.xnb</Output>
-      <Time>2017-04-13T13:00:35.404042+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main.xnb</Output>
+      <Time>2017-04-13T20:44:05.7998179+03:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\main2.jpg</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main2.xnb</Output>
-      <Time>2017-04-13T13:00:35.404042+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main2.xnb</Output>
+      <Time>2017-04-13T20:44:05.8388488+03:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\main3.jpg</Source>
@@ -70,17 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main3.xnb</Output>
-      <Time>2017-04-13T13:00:35.404042+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Items\manaSprite.png</Source>
-      <Name>Sprites\Items\manaSprite</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\manaSprite.xnb</Output>
-      <Time>2017-04-13T13:00:35.404042+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Backgrounds\main3.xnb</Output>
+      <Time>2017-04-13T20:44:05.8468536+03:00</Time>
     </Item>
     <Item>
       <Source>Components\hbar.jpg</Source>
@@ -88,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Components\hbar.xnb</Output>
-      <Time>2017-04-13T13:00:35.404042+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Components\hbar.xnb</Output>
+      <Time>2017-04-13T20:44:05.8958866+03:00</Time>
     </Item>
     <Item>
       <Source>Components\mbar.jpg</Source>
@@ -97,35 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Components\mbar.xnb</Output>
-      <Time>2017-04-13T13:00:35.404042+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Characters\Al-Position.png</Source>
-      <Name>Characters\Al-Position</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\Al-Position.xnb</Output>
-      <Time>2017-04-13T13:19:09.6426236+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Characters\BelPosition.png</Source>
-      <Name>Characters\BelPosition</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\BelPosition.xnb</Output>
-      <Time>2017-04-13T13:19:24.6629633+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Characters\RabPosition.png</Source>
-      <Name>Characters\RabPosition</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\RabPosition.xnb</Output>
-      <Time>2017-04-13T13:19:37.3911161+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Components\mbar.xnb</Output>
+      <Time>2017-04-13T20:44:05.90189+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Al-Defence.png</Source>
@@ -133,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Defence.xnb</Output>
-      <Time>2017-04-13T13:00:35.3571663+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Defence.xnb</Output>
+      <Time>2017-04-13T20:44:05.6382083+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Al-Attack.png</Source>
@@ -142,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Attack.xnb</Output>
-      <Time>2017-04-13T13:00:35.3571663+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Attack.xnb</Output>
+      <Time>2017-04-13T20:44:05.6226983+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Al-Lose.png</Source>
@@ -151,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Lose.xnb</Output>
-      <Time>2017-04-13T13:00:35.3571663+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Lose.xnb</Output>
+      <Time>2017-04-13T20:44:05.6427121+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Al-Specattack.png</Source>
@@ -160,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Specattack.xnb</Output>
-      <Time>2017-04-13T13:00:35.3571663+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Specattack.xnb</Output>
+      <Time>2017-04-13T20:44:05.65372+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Al-Win.png</Source>
@@ -169,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Win.xnb</Output>
-      <Time>2017-04-13T13:00:35.3571663+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Win.xnb</Output>
+      <Time>2017-04-13T20:44:05.6682282+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\BelAttack.png</Source>
@@ -178,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelAttack.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelAttack.xnb</Output>
+      <Time>2017-04-13T20:44:05.6777348+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\BelDefence.png</Source>
@@ -187,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelDefence.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelDefence.xnb</Output>
+      <Time>2017-04-13T20:44:05.6827381+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\BelLose.png</Source>
@@ -196,8 +160,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelLose.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelLose.xnb</Output>
+      <Time>2017-04-13T20:44:05.6872408+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\BelSpecAttack.png</Source>
@@ -205,8 +169,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelSpecAttack.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelSpecAttack.xnb</Output>
+      <Time>2017-04-13T20:44:05.6992493+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\BelWin.png</Source>
@@ -214,8 +178,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelWin.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelWin.xnb</Output>
+      <Time>2017-04-13T20:44:05.7037514+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Al-Defence1.png</Source>
@@ -223,8 +187,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Defence1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Defence1.xnb</Output>
+      <Time>2017-04-13T20:44:05.6402102+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Al-Attack1.png</Source>
@@ -232,8 +196,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Attack1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Attack1.xnb</Output>
+      <Time>2017-04-13T20:44:05.6252003+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Al-Lose1.png</Source>
@@ -241,8 +205,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Lose1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Lose1.xnb</Output>
+      <Time>2017-04-13T20:44:05.6452135+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Al-Specattack1.png</Source>
@@ -250,8 +214,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Specattack1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Specattack1.xnb</Output>
+      <Time>2017-04-13T20:44:05.6562202+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Al-Win1.png</Source>
@@ -259,8 +223,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Win1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Win1.xnb</Output>
+      <Time>2017-04-13T20:44:05.6707301+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Attack.png</Source>
@@ -268,8 +232,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Attack.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Attack.xnb</Output>
+      <Time>2017-04-13T20:44:05.6732315+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Defence.png</Source>
@@ -277,8 +241,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Defence.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Defence.xnb</Output>
+      <Time>2017-04-13T20:44:05.7172606+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Lose.png</Source>
@@ -286,8 +250,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Lose.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Lose.xnb</Output>
+      <Time>2017-04-13T20:44:05.7427801+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\SpecAttack.png</Source>
@@ -295,8 +259,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\SpecAttack.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\SpecAttack.xnb</Output>
+      <Time>2017-04-13T20:44:05.7517861+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Win.png</Source>
@@ -304,8 +268,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Win.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Win.xnb</Output>
+      <Time>2017-04-13T20:44:05.75779+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Attack1.png</Source>
@@ -313,8 +277,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Attack1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Attack1.xnb</Output>
+      <Time>2017-04-13T20:44:05.6757334+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Defence1.png</Source>
@@ -322,8 +286,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Defence1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Defence1.xnb</Output>
+      <Time>2017-04-13T20:44:05.7197614+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Lose1.png</Source>
@@ -331,8 +295,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Lose1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Lose1.xnb</Output>
+      <Time>2017-04-13T20:44:05.7447809+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\SpecAttack1.png</Source>
@@ -340,8 +304,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\SpecAttack1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\SpecAttack1.xnb</Output>
+      <Time>2017-04-13T20:44:05.7547886+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\Win1.png</Source>
@@ -349,8 +313,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Win1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Win1.xnb</Output>
+      <Time>2017-04-13T20:44:05.7597914+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\BelAttack1.png</Source>
@@ -358,8 +322,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelAttack1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelAttack1.xnb</Output>
+      <Time>2017-04-13T20:44:05.6807367+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\BelDefence1.png</Source>
@@ -367,8 +331,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelDefence1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelDefence1.xnb</Output>
+      <Time>2017-04-13T20:44:05.6847394+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\BelLose1.png</Source>
@@ -376,8 +340,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelLose1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelLose1.xnb</Output>
+      <Time>2017-04-13T20:44:05.6892427+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\BelSpecAttack1.png</Source>
@@ -385,8 +349,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelSpecAttack1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelSpecAttack1.xnb</Output>
+      <Time>2017-04-13T20:44:05.7017507+03:00</Time>
     </Item>
     <Item>
       <Source>Animations\BelWin1.png</Source>
@@ -394,62 +358,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelWin1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Animations\Al-Position.png</Source>
-      <Name>Animations\Al-Position</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Position.xnb</Output>
-      <Time>2017-04-13T13:00:35.3571663+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Animations\Al-Position1.png</Source>
-      <Name>Animations\Al-Position1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Position1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Animations\BelPosition.png</Source>
-      <Name>Animations\BelPosition</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelPosition.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Animations\BelPosition1.png</Source>
-      <Name>Animations\BelPosition1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelPosition1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3727903+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Animations\RabPosition.png</Source>
-      <Name>Animations\RabPosition</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\RabPosition.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
-    </Item>
-    <Item>
-      <Source>Animations\RabPosition1.png</Source>
-      <Name>Animations\RabPosition1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\RabPosition1.xnb</Output>
-      <Time>2017-04-13T13:00:35.3884168+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelWin1.xnb</Output>
+      <Time>2017-04-13T20:44:05.7062528+03:00</Time>
     </Item>
     <Item>
       <Source>Characters\RabPosition1.png</Source>
@@ -457,8 +367,35 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\RabPosition1.xnb</Output>
-      <Time>2017-04-13T15:06:06.3530891+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\RabPosition1.xnb</Output>
+      <Time>2017-04-13T20:44:05.8878824+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\Al-Position.png</Source>
+      <Name>Characters\Al-Position</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\Al-Position.xnb</Output>
+      <Time>2017-04-13T20:44:05.8788753+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\BelPosition.png</Source>
+      <Name>Characters\BelPosition</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\BelPosition.xnb</Output>
+      <Time>2017-04-13T20:44:05.882878+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\RabPosition.png</Source>
+      <Name>Characters\RabPosition</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\RabPosition.xnb</Output>
+      <Time>2017-04-13T20:44:05.8858788+03:00</Time>
     </Item>
     <Item>
       <Source>Characters\BelPosition1.png</Source>
@@ -466,8 +403,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\BelPosition1.xnb</Output>
-      <Time>2017-04-13T15:06:06.3530891+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\BelPosition1.xnb</Output>
+      <Time>2017-04-13T20:44:05.8838787+03:00</Time>
     </Item>
     <Item>
       <Source>Characters\Al-Position1.png</Source>
@@ -475,8 +412,188 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\Al-Position1.xnb</Output>
-      <Time>2017-04-13T15:06:06.3530891+03:00</Time>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Characters\Al-Position1.xnb</Output>
+      <Time>2017-04-13T20:44:05.8808772+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Items\Attack100.png</Source>
+      <Name>Sprites\Items\Attack100</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\Attack100.xnb</Output>
+      <Time>2017-04-13T21:28:32.7725748+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Items\def.png</Source>
+      <Name>Sprites\Items\def</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\def.xnb</Output>
+      <Time>2017-04-13T21:28:32.7785787+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Items\heart50.png</Source>
+      <Name>Sprites\Items\heart50</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\heart50.xnb</Output>
+      <Time>2017-04-13T21:28:32.7855839+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Items\heartFull.png</Source>
+      <Name>Sprites\Items\heartFull</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\heartFull.xnb</Output>
+      <Time>2017-04-13T21:28:32.7915862+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Items\mana100.png</Source>
+      <Name>Sprites\Items\mana100</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\mana100.xnb</Output>
+      <Time>2017-04-13T21:36:21.683022+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Items\mana50.png</Source>
+      <Name>Sprites\Items\mana50</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\mana50.xnb</Output>
+      <Time>2017-04-13T21:36:21.6770186+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\Al-Hit.png</Source>
+      <Name>Animations\Al-Hit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Hit.xnb</Output>
+      <Time>2017-04-13T21:01:04.0989008+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\Al-Hit11.png</Source>
+      <Name>Animations\Al-Hit11</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Hit11.xnb</Output>
+      <Time>2017-04-13T21:01:04.1179134+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\Al-Position.png</Source>
+      <Name>Animations\Al-Position</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Position.xnb</Output>
+      <Time>2017-04-13T21:01:04.1309214+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\Al-Position1.png</Source>
+      <Name>Animations\Al-Position1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\Al-Position1.xnb</Output>
+      <Time>2017-04-13T21:01:04.1389267+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\BelHit.png</Source>
+      <Name>Animations\BelHit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelHit.xnb</Output>
+      <Time>2017-04-13T21:01:04.1489345+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\BelHIt1.png</Source>
+      <Name>Animations\BelHIt1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelHIt1.xnb</Output>
+      <Time>2017-04-13T21:01:04.1589428+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\BelPosition.png</Source>
+      <Name>Animations\BelPosition</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelPosition.xnb</Output>
+      <Time>2017-04-13T21:01:04.171948+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\BelPosition1.png</Source>
+      <Name>Animations\BelPosition1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\BelPosition1.xnb</Output>
+      <Time>2017-04-13T21:01:04.179955+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\RabHit1.png</Source>
+      <Name>Animations\RabHit1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\RabHit1.xnb</Output>
+      <Time>2017-04-13T21:01:04.1959656+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\RabPosition.png</Source>
+      <Name>Animations\RabPosition</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\RabPosition.xnb</Output>
+      <Time>2017-04-13T21:01:04.2009684+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\RabPosition1.png</Source>
+      <Name>Animations\RabPosition1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\RabPosition1.xnb</Output>
+      <Time>2017-04-13T21:01:04.207973+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Animations\RebHit.png</Source>
+      <Name>Animations\RebHit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Animations\RebHit.xnb</Output>
+      <Time>2017-04-13T21:01:04.2269856+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Items\BasicAttack.png</Source>
+      <Name>Sprites\Items\BasicAttack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\BasicAttack.xnb</Output>
+      <Time>2017-04-13T21:10:51.2798622+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Items\SpecAttack.png</Source>
+      <Name>Sprites\Items\SpecAttack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Sprites\Items\SpecAttack.xnb</Output>
+      <Time>2017-04-13T21:10:51.2878664+03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -485,10 +602,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\</RootDirectory>
-      <LoggerRootDirectory>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\softuni\Project2\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -517,7 +634,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2017-04-02T16:29:28.0416566+03:00</Value>
+        <Value>2017-04-07T22:53:12.271312+03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

@@ -30,7 +30,7 @@ namespace BattleOfFaiths.Game.Components
 
         public void Initialize()
         {
-            namePosition = new Vector2(pos.X, pos.Y + 80);
+            namePosition = new Vector2(pos.X, pos.Y + 120);
             pricePosition = new Vector2(namePosition.X, namePosition.Y + 20);
             buttonPosition = new Vector2(pricePosition.X + 30, pricePosition.Y + 30);
             buy = new Button("Buy", buttonPosition, this.item);
