@@ -43,7 +43,7 @@ namespace BattleOfFaiths.Game.Components
             enemyName = enemy.Name;
 
             fighterNamePos = new Vector2(50, screenHeight - 50);
-            enemyNamePos = new Vector2(screenWidth - 220, screenHeight - 50);
+            enemyNamePos = new Vector2(screenWidth - 120, screenHeight - 50);
         }
 
         public void LoadContent(ContentManager Content)

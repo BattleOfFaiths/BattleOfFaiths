@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BattleOfFaiths.Game.Data;
 using BattleOfFaiths.Game.Models;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
@@ -21,17 +22,17 @@ namespace BattleOfFaiths.Game.Components
         private MouseState MouseState;
         private Animation animation;
 
-        public Attack(string type, Vector2 position, Character character, Animation animation)
+        public Attack(string type, Vector2 pos, Character character, Animation animation)
         {
             this.type = type;
-            this.pos = position;
+            this.pos = pos;
             this.character = character;
             this.animation = animation;
         }
 
         public void LoadContent(ContentManager Content)
         {
-            atkImage = Content.Load<Texture2D>("Sprites/Items/manaSprite");
+            atkImage = Content.Load<Texture2D>("Sprites/Items/" + GetActionIconSpite(character, type));
         }
 
         public void Update()
@@ -54,14 +55,11 @@ namespace BattleOfFaiths.Game.Components
                 {
                     switch (type)
                     {
-                        case "basic":
-                            color = new Color(0, 0, 255);
+                        case "Basic":
                             animation.Active = true;
                             break;
-                        case "special":
+                        case "Special":
                             animation.Active = true;
-                            break;
-                        default:
                             break;
                     }
                 }
@@ -71,6 +69,17 @@ namespace BattleOfFaiths.Game.Components
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(atkImage, pos, color);
+        }
+
+        private string GetActionIconSpite(Character character, string type)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentCharacter = context.Characters.FirstOrDefault(c => c.Id == character.Id);
+                var currentActionSprite = currentCharacter.CharacterActions.FirstOrDefault(c => c.Name == type).Sprite;
+
+                return currentActionSprite;
+            }
         }
     }
 }

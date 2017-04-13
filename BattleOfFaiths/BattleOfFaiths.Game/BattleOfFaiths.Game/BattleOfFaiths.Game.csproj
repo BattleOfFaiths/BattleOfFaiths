@@ -88,6 +88,7 @@
     <Compile Include="Components\Attack.cs" />
     <Compile Include="Components\Bar.cs" />
     <Compile Include="Components\CharacterBlock.cs" />
+    <Compile Include="Components\Control.cs" />
     <Compile Include="Components\DrawNames.cs" />
     <Compile Include="Components\Enemy.cs" />
     <Compile Include="Components\Fighter.cs" />

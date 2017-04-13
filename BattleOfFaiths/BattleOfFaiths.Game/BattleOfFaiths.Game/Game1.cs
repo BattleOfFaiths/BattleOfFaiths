@@ -41,7 +41,7 @@ namespace BattleOfFaiths.Game
             // TODO: Add your initialization logic here
             IsMouseVisible = true;
 
-           // mainMenu.Initialize();
+            mainMenu.Initialize();
             base.Initialize();
         }
 
@@ -55,7 +55,7 @@ namespace BattleOfFaiths.Game
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-           // mainMenu.LoadContent(Content);
+            mainMenu.LoadContent(Content);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace BattleOfFaiths.Game
             // TODO: Add your update logic here
             
             base.Update(gameTime);
-           // mainMenu.Update(Content, gameTime);
+            mainMenu.Update(Content, gameTime);
         }
 
         /// <summary>
@@ -93,9 +93,9 @@ namespace BattleOfFaiths.Game
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            
-            //mainMenu.Draw(spriteBatch, Content);
-              
+
+            mainMenu.Draw(spriteBatch, Content);
+
             base.Draw(gameTime);
         }
     }

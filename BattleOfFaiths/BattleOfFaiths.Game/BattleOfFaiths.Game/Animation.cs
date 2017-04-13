@@ -33,25 +33,19 @@ namespace BattleOfFaiths.Game
             set { position = value; }
         }
 
-        public int FrameWidth
-        {
-            get { return Image.Width / (int) amountOfFrames.X; }
-        }
-
-        public int FrameHeight
-        {
-            get { return Image.Height / (int) amountOfFrames.Y; }
-        }
-
         public Texture2D AnimationImage
         {
             set { Image = value; }
         }
 
+        public int FrameWidth => Image.Width / (int) amountOfFrames.X;
+
+        public int FrameHeight => Image.Height / (int) amountOfFrames.Y;
+
         public void Initialize(Vector2 position, Vector2 Frames)
         {
             active = false;
-            switchFrame = 200;
+            switchFrame = 160;
             this.position = position;
             this.amountOfFrames = Frames;
         }
@@ -67,8 +61,10 @@ namespace BattleOfFaiths.Game
                 frameCounter = 0;
                 currentFrame.X += FrameWidth;
                 if (currentFrame.X >= Image.Width)
-                    //currentFrame.X = 0;
+                {
+                    currentFrame.X = 0;
                     active = false;
+                }
             }
             sourceRect = new Rectangle((int)currentFrame.X, (int)currentFrame.Y, FrameWidth, FrameHeight);
         }
