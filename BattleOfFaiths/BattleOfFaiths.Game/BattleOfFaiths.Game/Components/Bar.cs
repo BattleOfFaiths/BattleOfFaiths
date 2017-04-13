@@ -18,6 +18,7 @@ namespace BattleOfFaiths.Game.Components
         private float multiplier;
         private Vector2 startPoint;
         private Vector2 endPoint;
+        //private Rectangle sourceRect;
 
         public Bar(string type, Vector2 position, int quantity, int isEnemy)
         {
@@ -52,18 +53,20 @@ namespace BattleOfFaiths.Game.Components
                 startPoint.X += multiplier * decreaseAmount;
             else
                 endPoint.X -= multiplier * decreaseAmount;
+
+            //sourceRect = new Rectangle(
+            //    (int) startPoint.X,
+            //    (int) endPoint.Y,
+            //    (int) (endPoint.X - startPoint.X),
+            //    (int) (endPoint.Y - startPoint.Y));
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(
                 bar, 
-                position, 
-                //new Rectangle(
-                //    (int)startPoint.X, 
-                //    (int)endPoint.Y, 
-                //    (int)(endPoint.X - startPoint.X), 
-                //    (int)(endPoint.Y - startPoint.Y)), 
+                position,
+                //sourceRect,
                 color);
         }
     }

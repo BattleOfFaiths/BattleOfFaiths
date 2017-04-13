@@ -17,6 +17,7 @@ namespace BattleOfFaiths.Game.Migrations
 
         protected override void Seed(BattleOfFaiths.Game.Data.BattleOfFaithsEntities context)
         {
+            //-------------- Items ------------------
             var health50 = new Item
             {
                 Name = "Health +50",
@@ -55,7 +56,8 @@ namespace BattleOfFaiths.Game.Migrations
             };
             context.Items.AddOrUpdate(i => i.Name, health50, healtFull, mana50, mana100, maxDef, attackBoost);
             context.SaveChanges();
-            //---------Alucar Character----------------//
+
+            //--------------- Characters ----------------//
             var Alucard = new Character
             {
                 Name = "Alucard",
@@ -63,10 +65,10 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "Al-Position",
                 EnemySprite = "Al-Position1",
                 Highscore = 0,
-                Health=100,
-                Mana=50,
-                Attack=30,
-                SpecAttack=60
+                Health = 100,
+                Mana = 50,
+                Attack = 30,
+                SpecAttack = 60
             };
             var Belmont = new Character
             {
@@ -75,10 +77,10 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "BelPosition",
                 EnemySprite = "BelPosition1",
                 Highscore = 0,
-                Health=100,
-                Mana=80,
-                Attack=30,
-                SpecAttack=40
+                Health = 100,
+                Mana = 80,
+                Attack = 30,
+                SpecAttack = 40
             };
             var Rebel = new Character
             {
@@ -95,14 +97,17 @@ namespace BattleOfFaiths.Game.Migrations
             };
             context.Characters.AddOrUpdate(c => c.Name, Alucard, Belmont, Rebel);
             context.SaveChanges();
-            //----------Character Action ------------------------//
+
+            //-------------------- Character Actions ------------------------//
+            // ------------------- Alucard --------------------
             var AlAttack = new CharacterAction
             {
                 Name = "Basic",
                 Sprite = "manaSprite",
                 PlayerSprite = "Al-Attack",
                 EnemySprite = "Al-Attack1",
-                CharacterId=Alucard.Id
+                CharacterId = Alucard.Id,
+                Frames = 6
             };
             var AlAttackSpec = new CharacterAction
             {
@@ -110,7 +115,8 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "Al-Specattack",
                 EnemySprite = "Al-Specattack1",
-                CharacterId = Alucard.Id
+                CharacterId = Alucard.Id,
+                Frames = 4
             };
             var AlWin= new CharacterAction
             {
@@ -118,7 +124,8 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "Al-Win",
                 EnemySprite = "Al-Win1",
-                CharacterId = Alucard.Id
+                CharacterId = Alucard.Id,
+                Frames = 4
             };
             var AlLose = new CharacterAction
             {
@@ -126,7 +133,8 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "Al-Lose",
                 EnemySprite = "Al-Lose1",
-                CharacterId = Alucard.Id
+                CharacterId = Alucard.Id,
+                Frames = 4
             };
             var AlDef = new CharacterAction
             {
@@ -134,16 +142,18 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "Al-Defence",
                 EnemySprite = "Al-Defence1",
-                CharacterId = Alucard.Id
+                CharacterId = Alucard.Id,
+                Frames = 3
             };
-            //----------------Belmont-----------------------//
+            //---------------- Belmont -----------------------//
             var BelAtt = new CharacterAction
             {
                 Name = "Basic",
                 Sprite = "manaSprite",
                 PlayerSprite = "BelAttack",
                 EnemySprite = "BelAttack1",
-                CharacterId = Belmont.Id
+                CharacterId = Belmont.Id,
+                Frames = 3
             };
             var BelAttackSpec = new CharacterAction
             {
@@ -151,7 +161,8 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "BelSpecAttack",
                 EnemySprite = "BelSpecAttack1",
-                CharacterId = Belmont.Id
+                CharacterId = Belmont.Id,
+                Frames = 6
             };
             var BelWin = new CharacterAction
             {
@@ -159,7 +170,8 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "BelWin",
                 EnemySprite = "BelWin1",
-                CharacterId = Belmont.Id
+                CharacterId = Belmont.Id,
+                Frames = 3
             };
             var BelLose = new CharacterAction
             {
@@ -167,7 +179,8 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "BelLose",
                 EnemySprite = "BelLose1",
-                CharacterId = Belmont.Id
+                CharacterId = Belmont.Id,
+                Frames = 4
             };
             var BelDef = new CharacterAction
             {
@@ -175,16 +188,18 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "BelDefence",
                 EnemySprite = "BelDefence1",
-                CharacterId = Belmont.Id
+                CharacterId = Belmont.Id,
+                Frames = 2
             };
-            //-------------------------------Rebel--------------------------//
+            //-------------------- Rebel -------------------//
             var RebAtt = new CharacterAction
             {
                 Name = "Basic",
                 Sprite = "manaSprite",
                 PlayerSprite = "Attack",
                 EnemySprite = "Attack1",
-                CharacterId = Rebel.Id
+                CharacterId = Rebel.Id,
+                Frames = 4
             };
             var RebAttackSpec = new CharacterAction
             {
@@ -192,7 +207,8 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "SpecAttack",
                 EnemySprite = "SpecAttack1",
-                CharacterId = Rebel.Id
+                CharacterId = Rebel.Id,
+                Frames = 5
             };
             var RebWin = new CharacterAction
             {
@@ -200,7 +216,8 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "Win",
                 EnemySprite = "Win1",
-                CharacterId = Rebel.Id
+                CharacterId = Rebel.Id,
+                Frames = 4
             };
             var RebLose = new CharacterAction
             {
@@ -208,7 +225,8 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "Lose",
                 EnemySprite = "Lose1",
-                CharacterId = Rebel.Id
+                CharacterId = Rebel.Id,
+                Frames = 4
             };
             var RebDef = new CharacterAction
             {
@@ -216,7 +234,8 @@ namespace BattleOfFaiths.Game.Migrations
                 Sprite = "manaSprite",
                 PlayerSprite = "Defence",
                 EnemySprite = "Defence1",
-                CharacterId = Rebel.Id
+                CharacterId = Rebel.Id,
+                Frames = 4
             };
             context.CharacterActions.AddOrUpdate(a => a.PlayerSprite, AlAttack, AlAttackSpec, AlWin, AlLose, AlDef, BelAtt, BelAttackSpec, BelWin, BelLose, BelDef, RebAtt, RebAttackSpec, RebWin, RebLose, RebDef);
             context.SaveChanges();

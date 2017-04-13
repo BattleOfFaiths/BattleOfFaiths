@@ -13,8 +13,7 @@ namespace BattleOfFaiths.Game.Models
         public string Sprite { get; set; } 
         public string PlayerSprite { get; set; }
         public string EnemySprite { get; set; }
-       
-
+        public int Frames { get; set; }
 
         public int CharacterId { get; set; }
         [ForeignKey("CharacterId")]

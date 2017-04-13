@@ -20,6 +20,7 @@ namespace BattleOfFaiths.Game.Screens
         private Fight fight;
 
         private DrawNames drawNames;
+        private Control control;
 
         private List<Components.Attack> attacks;
         private Components.Attack basicAttack;
@@ -49,13 +50,17 @@ namespace BattleOfFaiths.Game.Screens
 
             drawNames = new DrawNames(fighter.Character, enemy.Character);
             drawNames.Initialize();
-            InitializeBars();
 
             attacks = new List<Components.Attack>();
-            basicAttack = new Components.Attack("basic", new Vector2(340, 90), fighter.Character, fighter.BasicAttack);
-            specialAttack = new Components.Attack("special", new Vector2(400, 90), fighter.Character, fighter.SpecialAttack);
+            basicAttack = new Components.Attack("Basic", new Vector2(340, 90), fighter.Character, fighter.BasicAttack);
+            specialAttack = new Components.Attack("Special", new Vector2(410, 90), fighter.Character, fighter.SpecialAttack);
             attacks.Add(basicAttack);
             attacks.Add(specialAttack);
+
+            control = new Control(fight, fighter, enemy);
+            control.Initialize();
+
+            InitializeBars();
         }
 
         public void LoadContent(ContentManager Content)
@@ -81,6 +86,8 @@ namespace BattleOfFaiths.Game.Screens
                 atk.Update();
             }
             fighter.Update(gameTime);
+            enemy.Update(gameTime);
+            control.Update(gameTime);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -103,10 +110,10 @@ namespace BattleOfFaiths.Game.Screens
 
         private void InitializeBars()
         {
-            playerHealthBar = new Bar("health", new Vector2(20, 20), GetCharacterCharacteristicsByName(fighter.Character, "health"), 0);
-            enemyHealthBar = new Bar("health", new Vector2(420, 20), GetCharacterCharacteristicsByName(enemy.Character, "health"), 1);
-            playerManaBar = new Bar("mana", new Vector2(20, 60), GetCharacterCharacteristicsByName(fighter.Character, "mana"), 0);
-            enemyManaBar = new Bar("mana", new Vector2(420, 60), GetCharacterCharacteristicsByName(enemy.Character, "mana"), 1);
+            playerHealthBar = new Bar("health", new Vector2(20, 20), GetCharacterCharacteristicsByName("fighter", fight, "health"), 0);
+            enemyHealthBar = new Bar("health", new Vector2(420, 20), GetCharacterCharacteristicsByName("enemy", fight, "health"), 1);
+            playerManaBar = new Bar("mana", new Vector2(20, 60), GetCharacterCharacteristicsByName("fighter", fight, "mana"), 0);
+            enemyManaBar = new Bar("mana", new Vector2(420, 60), GetCharacterCharacteristicsByName("enemy", fight, "mana"), 1);
             bars = new List<Bar>();
             bars.Add(playerHealthBar);
             bars.Add(enemyHealthBar);
@@ -128,12 +135,14 @@ namespace BattleOfFaiths.Game.Screens
             }
         }
 
-        private int GetCharacterCharacteristicsByName(Character character, string name)
+        private int GetCharacterCharacteristicsByName(string type, Fight fight, string name)
         {
             using (var context = new BattleOfFaithsEntities())
             {
-                var currentCharacter = context.Characters.FirstOrDefault(c => c.Id == character.Id);
-                return 0; //currentCharacter.Characteristics.FirstOrDefault(c => c.Name == name).Value;
+                var currentFight = context.Fights.FirstOrDefault(f => f.Id == fight.Id);
+                return type == "fighter"
+                    ? (name == "health" ? currentFight.playerHealth : currentFight.playerMana)
+                    : (name == "health" ? currentFight.enemyHealth : currentFight.enemyMana);
             }
         }
     }

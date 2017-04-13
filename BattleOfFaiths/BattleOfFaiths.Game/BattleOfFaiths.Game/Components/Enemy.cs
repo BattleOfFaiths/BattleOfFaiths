@@ -17,20 +17,30 @@ namespace BattleOfFaiths.Game.Components
         private Texture2D enemyImage;
         private Vector2 enemyPosition;
 
-        public Vector2 Position
-        {
-            get { return enemyPosition; }
-        }
+        public Vector2 Position => enemyPosition;
+        public Texture2D Image => enemyImage;
+        public Character Character => enemy;
 
-        public Texture2D Image
-        {
-            get { return enemyImage; }
-        }
+        private Vector2 basicAttackPosition;
+        Animation basicAttack = new Animation();
 
-        public Character Character
-        {
-            get { return enemy; }
-        }
+        private Vector2 specialAttackPosition;
+        Animation specialAttack = new Animation();
+
+        private Vector2 defencePosition;
+        Animation defence = new Animation();
+
+        private Vector2 winPosition;
+        Animation win = new Animation();
+
+        private Vector2 losePosition;
+        Animation lose = new Animation();
+
+        public Animation BasicAttack => basicAttack;
+        public Animation SpecialAttack => specialAttack;
+        public Animation Defence => defence;
+        public Animation Win => win;
+        public Animation Lose => lose;
 
         public void Initialize()
         {
@@ -40,22 +50,67 @@ namespace BattleOfFaiths.Game.Components
             Random rnd = new Random();
             num = rnd.Next(1, enemies.Count);
             enemy = enemies[num];
-            enemyPosition = new Vector2(570, 250);
+            enemyPosition = new Vector2(500, 220);
+            basicAttackPosition = new Vector2(210, 220);
+            basicAttack.Initialize(basicAttackPosition, new Vector2(GetCharacterActionFrames("Basic", enemy), 1));
+            specialAttackPosition = new Vector2(210, 220);
+            specialAttack.Initialize(specialAttackPosition, new Vector2(GetCharacterActionFrames("Special", enemy), 1));
+            defencePosition = new Vector2(500, 220);
+            defence.Initialize(defencePosition, new Vector2(GetCharacterActionFrames("Defence", enemy), 1));
+            winPosition = new Vector2(500, 220);
+            win.Initialize(winPosition, new Vector2(GetCharacterActionFrames("Win", enemy), 1));
+            losePosition = new Vector2(500, 220);
+            lose.Initialize(losePosition, new Vector2(GetCharacterActionFrames("Lose", enemy), 1));
         }
 
         public void LoadContent(ContentManager Content)
         {
-            enemyImage = Content.Load<Texture2D>("Characters/" + enemy.Sprite);
+            enemyImage = Content.Load<Texture2D>("Characters/" + enemy.EnemySprite);
+            basicAttack.AnimationImage = Content.Load<Texture2D>("Animations/" + GetCharacterActionSprite("Basic", enemy));
+            specialAttack.AnimationImage = Content.Load<Texture2D>("Animations/" + GetCharacterActionSprite("Special", enemy));
+            defence.AnimationImage = Content.Load<Texture2D>("Animations/" + GetCharacterActionSprite("Defence", enemy));
+            win.AnimationImage = Content.Load<Texture2D>("Animations/" + GetCharacterActionSprite("Win", enemy));
+            lose.AnimationImage = Content.Load<Texture2D>("Animations/" + GetCharacterActionSprite("Lose", enemy));
         }
 
-        public void Update()
+        public void Update(GameTime gameTime)
         {
-            
+            if (basicAttack.Active)
+            {
+                basicAttack.Update(gameTime);
+            }
+            else if (specialAttack.Active)
+            {
+                specialAttack.Update(gameTime);
+            }
+            else if (defence.Active)
+            {
+                defence.Update(gameTime);
+            }
+            else if (win.Active)
+            {
+                win.Update(gameTime);
+            }
+            else if (lose.Active)
+            {
+                lose.Update(gameTime);
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(enemyImage, enemyPosition, Color.White);
+            if (basicAttack.Active)
+                basicAttack.Draw(spriteBatch);
+            else if (specialAttack.Active)
+                specialAttack.Draw(spriteBatch);
+            else if (defence.Active)
+                defence.Draw(spriteBatch);
+            else if (win.Active)
+                win.Draw(spriteBatch);
+            else if (lose.Active)
+                lose.Draw(spriteBatch);
+            else
+                spriteBatch.Draw(enemyImage, enemyPosition, Color.White);
         }
 
         private List<Character> GetAllCharacters()
@@ -63,6 +118,28 @@ namespace BattleOfFaiths.Game.Components
             using (var context = new BattleOfFaithsEntities())
             {
                 return context.Characters.ToList();
+            }
+        }
+
+        private string GetCharacterActionSprite(string type, Character character)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentCharacter = context.Characters.FirstOrDefault(c => c.Id == character.Id);
+                var currentActionSprite = currentCharacter.CharacterActions.FirstOrDefault(a => a.Name == type).EnemySprite;
+
+                return currentActionSprite;
+            }
+        }
+
+        private int GetCharacterActionFrames(string type, Character character)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentCharacter = context.Characters.FirstOrDefault(c => c.Id == character.Id);
+                var currentActionFrames = currentCharacter.CharacterActions.FirstOrDefault(a => a.Name == type).Frames;
+
+                return currentActionFrames;
             }
         }
     }
