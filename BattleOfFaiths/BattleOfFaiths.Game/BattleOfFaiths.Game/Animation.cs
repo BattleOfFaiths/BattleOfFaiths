@@ -45,7 +45,7 @@ namespace BattleOfFaiths.Game
         public void Initialize(Vector2 position, Vector2 Frames)
         {
             active = false;
-            switchFrame = 160;
+            switchFrame = 150;
             this.position = position;
             this.amountOfFrames = Frames;
         }

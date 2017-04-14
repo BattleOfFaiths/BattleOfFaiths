@@ -96,6 +96,7 @@
     <Compile Include="Components\ShopItem.cs" />
     <Compile Include="Helpers\FightAuth.cs" />
     <Compile Include="Models\Fight.cs" />
+    <Compile Include="Screens\EndFightScreen.cs" />
     <Compile Include="Screens\FightingScreen.cs" />
     <Compile Include="Screens\GameMenu.cs" />
     <Compile Include="Screens\LoadGameScreen.cs" />
