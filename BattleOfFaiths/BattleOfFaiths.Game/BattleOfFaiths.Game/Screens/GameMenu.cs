@@ -98,7 +98,7 @@ namespace BattleOfFaiths.Game.Screens
             }
             else if (FightAuth.HasStartedFight())
             {
-                fightScreen.Update(gameTime);
+                fightScreen.Update(gameTime, Content);
             }
             else 
             {

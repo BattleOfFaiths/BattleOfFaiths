@@ -18,16 +18,18 @@ namespace BattleOfFaiths.Game.Components
         private string type;
         private Color color;
         private Character character;
-        private MouseState prevMouseState;
-        private MouseState MouseState;
+        private KeyboardState keyState;
+        private KeyboardState prevKeyState;
         private Animation animation;
+        private Control control;
 
-        public Attack(string type, Vector2 pos, Character character, Animation animation)
+        public Attack(string type, Vector2 pos, Character character, Animation animation, Control control)
         {
             this.type = type;
             this.pos = pos;
             this.character = character;
             this.animation = animation;
+            this.control = control;
         }
 
         public void LoadContent(ContentManager Content)
@@ -37,32 +39,38 @@ namespace BattleOfFaiths.Game.Components
 
         public void Update()
         {
-            prevMouseState = MouseState;
-            MouseState = Mouse.GetState();
-
-            if (MouseState.X < pos.X || MouseState.Y < pos.Y
-                || MouseState.X > pos.X + atkImage.Width
-                || MouseState.Y > pos.Y + atkImage.Height)
-            {
-                //The mouse is not hovering over the button
-                color = new Color(255, 255, 255);    
-            }
+            if (control.Turn == 1)
+                color = Color.Black;
             else
             {
-                color = new Color(0, 0, 0);
+                if (type == "Basic")
+                    color = Color.White;
+                else if (control.PlayerMana < control.PlayerSpAtk)
+                    color = Color.Black;
+                else color = Color.White; 
+            }
 
-                if (MouseState.LeftButton == ButtonState.Pressed && prevMouseState.LeftButton == ButtonState.Released)
-                {
-                    switch (type)
-                    {
-                        case "Basic":
-                            animation.Active = true;
-                            break;
-                        case "Special":
-                            animation.Active = true;
-                            break;
-                    }
-                }
+            prevKeyState = keyState;
+            keyState = Keyboard.GetState();
+            
+            if (keyState.IsKeyDown(Keys.A) && prevKeyState.IsKeyUp(Keys.A))
+            {
+                if (type == "Basic" && color == Color.White)
+                    animation.Active = true;
+            }
+            else if (keyState.IsKeyUp(Keys.A) && prevKeyState.IsKeyDown(Keys.A))
+            {
+                //false
+            }
+
+            if (keyState.IsKeyDown(Keys.S) && prevKeyState.IsKeyUp(Keys.S))
+            {
+                if (type == "Special" && color == Color.White)
+                    animation.Active = true;
+            }
+            else if (keyState.IsKeyUp(Keys.S) && prevKeyState.IsKeyDown(Keys.S))
+            {
+                //false
             }
         }
 

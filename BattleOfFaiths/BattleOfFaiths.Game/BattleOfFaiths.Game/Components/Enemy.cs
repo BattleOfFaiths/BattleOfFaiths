@@ -36,11 +36,15 @@ namespace BattleOfFaiths.Game.Components
         private Vector2 losePosition;
         Animation lose = new Animation();
 
+        private Vector2 hitPosition;
+        Animation hit = new Animation();
+
         public Animation BasicAttack => basicAttack;
         public Animation SpecialAttack => specialAttack;
         public Animation Defence => defence;
         public Animation Win => win;
         public Animation Lose => lose;
+        public Animation Hit => hit;
 
         public void Initialize()
         {
@@ -61,6 +65,8 @@ namespace BattleOfFaiths.Game.Components
             win.Initialize(winPosition, new Vector2(GetCharacterActionFrames("Win", enemy), 1));
             losePosition = new Vector2(500, 220);
             lose.Initialize(losePosition, new Vector2(GetCharacterActionFrames("Lose", enemy), 1));
+            hitPosition = new Vector2(500, 220);
+            hit.Initialize(hitPosition, new Vector2(GetCharacterActionFrames("Hit", enemy), 1));
         }
 
         public void LoadContent(ContentManager Content)
@@ -71,6 +77,7 @@ namespace BattleOfFaiths.Game.Components
             defence.AnimationImage = Content.Load<Texture2D>("Animations/" + GetCharacterActionSprite("Defence", enemy));
             win.AnimationImage = Content.Load<Texture2D>("Animations/" + GetCharacterActionSprite("Win", enemy));
             lose.AnimationImage = Content.Load<Texture2D>("Animations/" + GetCharacterActionSprite("Lose", enemy));
+            hit.AnimationImage = Content.Load<Texture2D>("Animations/" + GetCharacterActionSprite("Hit", enemy));
         }
 
         public void Update(GameTime gameTime)
@@ -95,6 +102,10 @@ namespace BattleOfFaiths.Game.Components
             {
                 lose.Update(gameTime);
             }
+            else if (hit.Active)
+            {
+                hit.Update(gameTime);
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -109,6 +120,8 @@ namespace BattleOfFaiths.Game.Components
                 win.Draw(spriteBatch);
             else if (lose.Active)
                 lose.Draw(spriteBatch);
+            else if (hit.Active)
+                hit.Draw(spriteBatch);
             else
                 spriteBatch.Draw(enemyImage, enemyPosition, Color.White);
         }

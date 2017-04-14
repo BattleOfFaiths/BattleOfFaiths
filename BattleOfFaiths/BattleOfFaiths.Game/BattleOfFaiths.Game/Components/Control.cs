@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using BattleOfFaiths.Game.Data;
+using BattleOfFaiths.Game.Helpers;
 using BattleOfFaiths.Game.Models;
+using BattleOfFaiths.Game.Screens;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace BattleOfFaiths.Game.Components
 {
@@ -15,7 +21,15 @@ namespace BattleOfFaiths.Game.Components
         private Fight fight;
         private Fighter fighter;
         private Enemy enemy;
-        private float WaitTimeToChangeTurn = 0;
+        private bool changeTurn = false, endFight = false, waitingDone = false, winLoseDone = false;
+        private double counter = 0d;
+        private double endFightCounter = 0d;
+        private double winLoseCounter = 0d;
+        private int playerHealth, enemyHealth, playerMana, enemyMana;
+        private int playerAtk, enemyAtk, playerSpAtk, enemySpAtk;
+        private EndFightScreen endFightScreen;
+        private int highscoreMade;
+        private bool hasFightEnded, hasEndBeenInitialized, didWin;
 
         public Control(Fight fight, Fighter fighter, Enemy enemy)
         {
@@ -25,134 +39,289 @@ namespace BattleOfFaiths.Game.Components
             this.turn = 0;
         }
 
+        public int PlayerHealth => playerHealth;
+        public int PlayerMana => playerMana;
+        public int PlayerAtk => playerAtk;
+        public int PlayerSpAtk => playerSpAtk;
+        public int EnemyHealth => enemyHealth;
+        public int EnemyMana => enemyMana;
+        public int EnemyAtk => enemyAtk;
+        public int EnemySpAtk => enemySpAtk;
+
         public int Turn
         {
             get { return turn; }
             set { turn = value; }
         }
 
+        public bool HasFightEnded
+        {
+            get { return hasFightEnded; }
+        }
+
         public void Initialize()
         {
             FillFightCharacteristics(fight, fighter, enemy);
+            playerHealth = GetStats(fight, "playerHealth");
+            playerMana = GetStats(fight, "playerMana");
+            playerAtk = GetStats(fight, "playerAtk");
+            playerSpAtk = GetStats(fight, "playerSpAtk");
+            enemyHealth = GetStats(fight, "enemyHealth");
+            enemyMana = GetStats(fight, "enemyMana");
+            enemyAtk = GetStats(fight, "enemyAtk");
+            enemySpAtk = GetStats(fight, "enemySpAtk");
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, ContentManager Content)
         {
-            if (this.Turn == 0)
+            if (hasFightEnded)
             {
-                if (fighter.BasicAttack.Active)
+                if (!hasEndBeenInitialized)
                 {
-                    fight.playerMana -= fight.playerAtkDmg;
-                    if (DidDefend())
-                    {
-                        enemy.Defence.Active = true;
-                        fight.enemyHealth += fight.playerAtkDmg / 3;
-                        fight.playerMana += fight.playerAtkDmg;
-                    }
-                    else
-                    {
-                        enemy.Lose.Active = true;
-                        fight.playerMana += fight.playerAtkDmg;
-                        fight.enemyHealth -= fight.playerAtkDmg;
-                        if (fight.enemyHealth - fight.playerAtkDmg <= 0)
-                        {
-                            //end fight;
-                        }
-                    }
-                    WaitTimeToChangeTurn = 5000;
-                    while (WaitTimeToChangeTurn > 0)
-                        Wait(gameTime);
+                    endFightScreen = new EndFightScreen(didWin, highscoreMade.ToString(), fighter);
+                    endFightScreen.Initialize();
+                    endFightScreen.LoadContent(Content);
+                    hasEndBeenInitialized = true;
                 }
-                else if (fighter.SpecialAttack.Active)
-                {
-                    fight.playerMana -= fight.playerSpAtkDmg;
-                    if (DidDefend())
-                    {
-                        enemy.Defence.Active = true;
-                        fight.enemyHealth += fight.playerSpAtkDmg / 3;
-                    }
-                    else
-                    {
-                        enemy.Lose.Active = true;
-                        fight.enemyHealth -= fight.playerSpAtkDmg;
-                        if (fight.enemyHealth - fight.playerSpAtkDmg <= 0)
-                        {
-                            //end fight;
-                        }
-                    }
-                    WaitTimeToChangeTurn = 5000;
-                    while (WaitTimeToChangeTurn > 0)
-                        Wait(gameTime);
-                }
+                endFightScreen.Update();
             }
             else
             {
-                if (fight.enemyMana >= fight.enemySpAtkDmg)
+                if (!endFight)
                 {
-                    enemy.SpecialAttack.Active = true;
-                    fight.enemyMana -= fight.enemySpAtkDmg;
-                    if (DidDefend())
+                    if (!changeTurn)
                     {
-                        fighter.Defence.Active = true;
-                        fight.playerHealth += fight.enemySpAtkDmg / 3;
-                    }
-                    else
-                    {
-                        fighter.Lose.Active = true;
-                        fight.playerHealth -= fight.enemySpAtkDmg;
-                        if (fight.playerHealth - fight.enemySpAtkDmg <= 0)
+                        if (this.Turn == 0)
                         {
-                            //end fight;
+                            if (fighter.BasicAttack.Active)
+                            {
+                                FighterBasicAttack(gameTime);
+                                changeTurn = true;
+                            }
+                            else if (fighter.SpecialAttack.Active)
+                            {
+                                FighterSpecialAttack(gameTime);
+                                changeTurn = true;
+                            }
                         }
+                        else
+                        {
+                            if (enemyMana >= enemySpAtk)
+                            {
+                                EnemySpecialAttack(gameTime);
+                            }
+                            else
+                            {
+                                EnemyBasicAttack(gameTime);
+                            }
+                            changeTurn = true;
+                        }
+                    }
+
+                    if (changeTurn)
+                    {
+                        Wait(gameTime);
                     }
                 }
                 else
                 {
-                    enemy.BasicAttack.Active = true;
-                    fight.enemyMana -= fight.enemyAtkDmg;
-                    if (DidDefend())
+                    EndFightPause(gameTime);
+                    if (waitingDone)
                     {
-                        fighter.Defence.Active = true;
-                        fight.playerHealth += fight.enemyAtkDmg / 3;
-                        fight.enemyMana += fight.enemyAtkDmg;
-                    }
-                    else
-                    {
-                        fighter.Lose.Active = true;
-                        fight.playerMana += fight.playerAtkDmg;
-                        fight.playerHealth -= fight.enemyAtkDmg;
-                        if (fight.playerHealth - fight.enemyAtkDmg <= 0)
-                        {
-                            //end fight;
-                        }
+                        if (didWin) YouWin(gameTime);
+                        else YouLose(gameTime);
                     }
                 }
-                WaitTimeToChangeTurn = 5000;
-                while (WaitTimeToChangeTurn > 0)
-                    Wait(gameTime);
+            }
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            if (hasEndBeenInitialized)
+                endFightScreen.Draw(spriteBatch);
+        }
+
+        private void EnemyBasicAttack(GameTime gameTime)
+        {
+            enemy.BasicAttack.Active = true;
+            if (DidDefend())
+            {
+                fighter.Defence.Active = true;
+                playerHealth += enemyAtk / 3;
+                enemyMana += enemyAtk;
+            }
+            else
+            {
+                fighter.Hit.Active = true;
+                enemyMana += enemyAtk;
+                playerHealth -= enemyAtk;
+                if (playerHealth - enemyAtk <= 0)
+                {
+                    this.didWin = false;
+                    endFight = true;
+                    //YouLose();
+                }
+            }
+        }
+
+        private void EnemySpecialAttack(GameTime gameTime)
+        {
+            enemy.SpecialAttack.Active = true;
+            enemyMana -= enemySpAtk;
+            if (DidDefend())
+            {
+                fighter.Defence.Active = true;
+                playerHealth += enemySpAtk / 3;
+            }
+            else
+            {
+                fighter.Hit.Active = true;
+                playerHealth -= enemySpAtk;
+                if (playerHealth - enemySpAtk <= 0)
+                {
+                    this.didWin = false;
+                    endFight = true;
+                    //YouLose();
+                }
+            }
+        }
+
+        private void YouLose(GameTime gameTime)
+        {
+            playerHealth = 0;
+            fighter.Lose.Active = true;
+            enemy.Win.Active = true;
+            WaitWinLoseReaction(gameTime);
+            if (winLoseDone)
+            {
+                SaveFightStatsToDatabase(fight, fighter, enemy);
+                hasFightEnded = true;
+            }
+        }
+
+        private void FighterSpecialAttack(GameTime gameTime)
+        {
+            highscoreMade += playerSpAtk;
+            playerMana -= playerSpAtk;
+            if (DidDefend())
+            {
+                enemy.Defence.Active = true;
+                enemyHealth += playerSpAtk / 3;
+            }
+            else
+            {
+                enemy.Hit.Active = true;
+                enemyHealth -= playerSpAtk;
+                if (enemyHealth - playerSpAtk <= 0)
+                {
+                    this.didWin = true;
+                    endFight = true;
+                    //YouWin();
+                }
+            }
+        }
+
+        private void FighterBasicAttack(GameTime gameTime)
+        {
+            highscoreMade += playerAtk;
+            if (DidDefend())
+            {
+                enemy.Defence.Active = true;
+                enemyHealth += playerAtk / 3;
+                playerMana += playerAtk;
+            }
+            else
+            {
+                enemy.Hit.Active = true;
+                playerMana += playerAtk;
+                enemyHealth -= playerAtk;
+                if (enemyHealth - playerAtk <= 0)
+                {
+                    this.didWin = true;
+                    endFight = true;
+                    
+                    //YouWin();
+                }
+            }
+        }
+
+        private void YouWin(GameTime gameTime)
+        {
+            playerHealth = 0;
+            enemy.Lose.Active = true;
+            fighter.Win.Active = true;
+            WaitWinLoseReaction(gameTime);
+            if (winLoseDone)
+            {
+                SaveFightStatsToDatabase(fight, fighter, enemy);
+                hasFightEnded = true;
             }
         }
 
         private void Wait(GameTime gameTime)
         {
-            if (this.WaitTimeToChangeTurn > 0)
+            this.counter += gameTime.ElapsedGameTime.TotalSeconds;
+            if (this.counter > 2)
             {
-                this.WaitTimeToChangeTurn -= (int) gameTime.ElapsedGameTime.TotalSeconds;
-                if (this.WaitTimeToChangeTurn <= 0)
-                {
-                    this.WaitTimeToChangeTurn = 0;
-                    this.Turn = this.Turn == 0 ? 1 : 0;
-                }
+                this.Turn = this.Turn == 0 ? 1 : 0;
+                this.counter = 0;
+                changeTurn = false;
+            }
+        }
+
+        private void EndFightPause(GameTime gameTime)
+        {
+            this.endFightCounter += gameTime.ElapsedGameTime.TotalSeconds;
+            if (this.endFightCounter > 2)
+            {
+                waitingDone = true;
+            }
+        }
+
+        private void WaitWinLoseReaction(GameTime gameTime)
+        {
+            this.winLoseCounter += gameTime.ElapsedGameTime.TotalSeconds;
+            if (this.winLoseCounter > 2)
+            {
+                winLoseDone = true;
             }
         }
 
         private bool DidDefend()
         {
-            //int num;
-            //Random rnd = new Random();
-            //num = rnd.Next(1, 5);
-            //return num != 1 && num != 3 && num != 5;
-            return false;
+            int num;
+            Random rnd = new Random();
+            num = rnd.Next(1, 6);
+            return num != 1 && num != 3 && num != 5;
+        }
+
+        private int GetStats(Fight fight, string type)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentFight = context.Fights.FirstOrDefault(f => f.Id == fight.Id);
+                switch (type)
+                {
+                    case "playerHealth":
+                        return currentFight.playerHealth;
+                    case "playerMana":
+                        return currentFight.playerMana;
+                    case "playerAtk":
+                        return currentFight.playerAtkDmg;
+                    case "playerSpAtk":
+                        return currentFight.playerSpAtkDmg;
+                    case "enemyHealth":
+                        return currentFight.enemyHealth;
+                    case "enemyMana":
+                        return currentFight.enemyMana;
+                    case "enemyAtk":
+                        return currentFight.enemyAtkDmg;
+                    case "enemySpAtk":
+                        return currentFight.enemySpAtkDmg;
+                    default:
+                        return 0;
+                }
+            }
         }
 
         private void FillFightCharacteristics(Fight fight, Fighter fighter, Enemy enemy)
@@ -171,6 +340,22 @@ namespace BattleOfFaiths.Game.Components
                 currentFight.enemyMana = currentEnemy.Mana;
                 currentFight.enemyAtkDmg = currentEnemy.Attack;
                 currentFight.enemySpAtkDmg = currentEnemy.SpecAttack;
+                context.SaveChanges();
+            }
+        }
+
+        private void SaveFightStatsToDatabase(Fight fight, Fighter fighter, Enemy enemy)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentFight = context.Fights.FirstOrDefault(f => f.Id == fight.Id);
+                var currentFighter = context.Characters.FirstOrDefault(c => c.Name == fighter.Character.Name);
+                var currentEnemy = context.Characters.FirstOrDefault(c => c.Name == enemy.Character.Name);
+
+                currentFight.playerHealth = playerHealth;
+                currentFight.playerMana = playerMana;
+                currentFight.enemyHealth = enemyHealth;
+                currentFight.enemyMana = enemyMana;
                 context.SaveChanges();
             }
         }

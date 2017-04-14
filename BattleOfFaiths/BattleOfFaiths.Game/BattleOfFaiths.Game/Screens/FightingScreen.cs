@@ -26,6 +26,26 @@ namespace BattleOfFaiths.Game.Screens
         private Components.Attack basicAttack;
         private Components.Attack specialAttack;
 
+        //test
+        private SpriteFont font;
+        private string playerHealth;
+        private Vector2 playerHealthPos;
+        private string playerMana;
+        private Vector2 playerManaPos;
+        private string playerAtk;
+        private Vector2 playerAtkPos;
+        private string playerSpAtk;
+        private Vector2 playerSpAtkPos;
+        private string enemyHealth;
+        private Vector2 enemyHealthPos;
+        private string enemyMana;
+        private Vector2 enemyManaPos;
+        private string enemyAtk;
+        private Vector2 enemyAtkPos;
+        private string enemySpAtk;
+        private Vector2 enemySpAtkPos;
+        //test
+
         //private List<Item> items;
 
         private Map map = new Map();
@@ -51,16 +71,37 @@ namespace BattleOfFaiths.Game.Screens
             drawNames = new DrawNames(fighter.Character, enemy.Character);
             drawNames.Initialize();
 
-            attacks = new List<Components.Attack>();
-            basicAttack = new Components.Attack("Basic", new Vector2(340, 90), fighter.Character, fighter.BasicAttack);
-            specialAttack = new Components.Attack("Special", new Vector2(410, 90), fighter.Character, fighter.SpecialAttack);
-            attacks.Add(basicAttack);
-            attacks.Add(specialAttack);
-
             control = new Control(fight, fighter, enemy);
             control.Initialize();
 
             InitializeBars();
+
+            attacks = new List<Components.Attack>();
+            basicAttack = new Components.Attack("Basic", new Vector2(340, 90), fighter.Character, fighter.BasicAttack, control);
+            specialAttack = new Components.Attack("Special", new Vector2(410, 90), fighter.Character, fighter.SpecialAttack, control);
+            attacks.Add(basicAttack);
+            attacks.Add(specialAttack);
+
+            //test
+
+            playerHealth = control.PlayerHealth.ToString();
+                playerHealthPos = new Vector2(10, 100);
+                playerMana = control.PlayerMana.ToString();
+                playerManaPos = new Vector2(10, 120); 
+                playerAtk = control.PlayerAtk.ToString(); 
+                playerAtkPos = new Vector2(10, 140);
+                playerSpAtk = control.PlayerSpAtk.ToString(); 
+                playerSpAtkPos = new Vector2(10, 160);
+                enemyHealth = control.EnemyHealth.ToString(); 
+                enemyHealthPos = new Vector2(10, 220);
+                enemyMana = control.EnemyMana.ToString(); 
+                enemyManaPos = new Vector2(10, 240);
+                enemyAtk = control.EnemyAtk.ToString(); 
+                enemyAtkPos = new Vector2(10, 260);
+                enemySpAtk = control.EnemySpAtk.ToString(); 
+                enemySpAtkPos = new Vector2(10, 280);
+
+            //test
         }
 
         public void LoadContent(ContentManager Content)
@@ -77,9 +118,12 @@ namespace BattleOfFaiths.Game.Screens
             {
                 atk.LoadContent(Content);
             }
+            //test
+            font = Content.Load<SpriteFont>("Fonts/font");
+            //test
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, ContentManager Content)
         {
             foreach (var atk in attacks)
             {
@@ -87,24 +131,51 @@ namespace BattleOfFaiths.Game.Screens
             }
             fighter.Update(gameTime);
             enemy.Update(gameTime);
-            control.Update(gameTime);
+            control.Update(gameTime, Content);
+            //test
+
+            playerHealth = control.PlayerHealth.ToString();
+            playerMana = control.PlayerMana.ToString();
+            playerAtk = control.PlayerAtk.ToString();
+            playerSpAtk = control.PlayerSpAtk.ToString();
+            enemyHealth = control.EnemyHealth.ToString();
+            enemyMana = control.EnemyMana.ToString();
+            enemyAtk = control.EnemyAtk.ToString();
+            enemySpAtk = control.EnemySpAtk.ToString();
+
+            //test
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            map.Draw(spriteBatch);
-            foreach (Bar bar in bars)
+            if (!control.HasFightEnded)
             {
-                bar.Draw(spriteBatch);
+                map.Draw(spriteBatch);
+                foreach (Bar bar in bars)
+                {
+                    bar.Draw(spriteBatch);
+                }
+                fighter.Draw(spriteBatch);
+                enemy.Draw(spriteBatch);
+                drawNames.Draw(spriteBatch);
+                foreach (var atk in attacks)
+                {
+                    atk.Draw(spriteBatch);
+                }
+                //test
+                spriteBatch.DrawString(font, "ph: " + playerHealth, playerHealthPos, Color.White);
+                spriteBatch.DrawString(font, "pm: " + playerMana, playerManaPos, Color.White);
+                spriteBatch.DrawString(font, "pa: " + playerAtk, playerAtkPos, Color.White);
+                spriteBatch.DrawString(font, "ps: " + playerSpAtk, playerSpAtkPos, Color.White);
+                spriteBatch.DrawString(font, "eh: " + enemyHealth, enemyHealthPos, Color.White);
+                spriteBatch.DrawString(font, "em: " + enemyMana, enemyManaPos, Color.White);
+                spriteBatch.DrawString(font, "ea: " + enemyAtk, enemyAtkPos, Color.White);
+                spriteBatch.DrawString(font, "es: " + enemySpAtk, enemySpAtkPos, Color.White);
+                //test
             }
-            fighter.Draw(spriteBatch);
-            enemy.Draw(spriteBatch);
-            drawNames.Draw(spriteBatch);
-            foreach (var atk in attacks)
-            {
-                atk.Draw(spriteBatch);
-            }
+            else
+                control.Draw(spriteBatch);
             spriteBatch.End();
         }
 

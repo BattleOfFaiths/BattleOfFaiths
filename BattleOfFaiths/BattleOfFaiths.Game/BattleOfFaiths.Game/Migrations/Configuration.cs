@@ -259,9 +259,9 @@ namespace BattleOfFaiths.Game.Migrations
             {
                 Name = "Hit",
                 Sprite = "manaSprite",
-                PlayerSprite = "RabHit",
-                EnemySprite = "RabHit",
-                CharacterId = Belmont.Id,
+                PlayerSprite = "RebHit",
+                EnemySprite = "RebHit1",
+                CharacterId = Rebel.Id,
                 Frames = 3
             };
             context.CharacterActions.AddOrUpdate(a => a.PlayerSprite, AlAttack, AlAttackSpec, AlWin, AlLose, AlDef, AlHit, BelAtt, BelAttackSpec, BelWin, BelLose, BelDef, BelHit, RebAtt, RebAttackSpec, RebWin, RebLose, RebDef, RebHit);
