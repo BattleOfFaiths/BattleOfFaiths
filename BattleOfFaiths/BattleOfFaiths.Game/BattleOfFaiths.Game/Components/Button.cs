@@ -72,12 +72,12 @@ namespace BattleOfFaiths.Game.Components
                 if (StaticBooleans.IsShopOpen)
                 {
                     if (item != null && this.item.Price > GameAuth.GetCurrentGame().Money)
-                            color = new Color(0, 0, 0);
+                            color = new Color(161, 161,161);
                 }
             }
             else
             {
-                color = new Color(0, 0, 0);
+                color = new Color(161,161,161);
                
                 if (MouseState.LeftButton == ButtonState.Pressed && prevMouseState.LeftButton == ButtonState.Released)
                 {

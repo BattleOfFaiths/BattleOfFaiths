@@ -33,7 +33,7 @@ namespace BattleOfFaiths.Game.Components
         public void Initialize()
         {
             fighterData = GetFighterData(character);
-            position = new Vector2(characterPos.X + 100, characterPos.Y);
+            position = new Vector2(characterPos.X + 150, characterPos.Y);
             fightButtonPos = new Vector2(position.X + 200, position.Y);
             fightButton = new Button("Fight", fightButtonPos, this.character);
         }
@@ -53,7 +53,7 @@ namespace BattleOfFaiths.Game.Components
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(fighterProfile, characterPos, Color.White);
-            spriteBatch.DrawString(font, fighterData, position, Color.Black);
+            spriteBatch.DrawString(font, fighterData, position, Color.LightGray);
             fightButton.Draw(spriteBatch);
         }
 

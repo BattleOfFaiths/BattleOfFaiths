@@ -1,11 +1,10 @@
 Content\Fonts\font.xnb
+Content\Fonts\font1.xnb
 Content\Backgrounds\bg1.xnb
 Content\Backgrounds\bg2.xnb
 Content\Backgrounds\bg3.xnb
 Content\Backgrounds\bg4.xnb
-Content\Backgrounds\main.xnb
 Content\Backgrounds\main2.xnb
-Content\Backgrounds\main3.xnb
 Content\Components\hbar.xnb
 Content\Components\mbar.xnb
 Content\Animations\Al-Defence.xnb
@@ -52,10 +51,10 @@ Content\Animations\BelHit.xnb
 Content\Animations\BelHIt1.xnb
 Content\Animations\BelPosition.xnb
 Content\Animations\BelPosition1.xnb
+Content\Animations\RebHit1.xnb
 Content\Animations\RabPosition.xnb
 Content\Animations\RabPosition1.xnb
 Content\Animations\RebHit.xnb
-Content\Sprites\Items\BasicAttack.xnb
 Content\Sprites\Items\SpecAttack.xnb
 Content\Sprites\Items\Attack100.xnb
 Content\Sprites\Items\def.xnb
@@ -63,5 +62,10 @@ Content\Sprites\Items\heart50.xnb
 Content\Sprites\Items\heartFull.xnb
 Content\Sprites\Items\mana100.xnb
 Content\Sprites\Items\mana50.xnb
-Content\Animations\RebHit1.xnb
-Content\Fonts\font1.xnb
+Content\Backgrounds\Load.xnb
+Content\Backgrounds\main3.xnb
+Content\Backgrounds\sho1.xnb
+Content\Backgrounds\main.xnb
+Content\Sprites\Items\BasicAttack.xnb
+Content\Backgrounds\1.xnb
+Content\Backgrounds\skul.xnb

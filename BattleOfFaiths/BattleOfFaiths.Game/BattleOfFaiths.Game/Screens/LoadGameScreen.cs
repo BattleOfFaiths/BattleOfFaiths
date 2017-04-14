@@ -13,6 +13,8 @@ namespace BattleOfFaiths.Game.Screens
     public class LoadGameScreen
     {
         private static SpriteFont font;
+        private Texture2D gameLoadBackgroundImage;
+        private Vector2 bgPosition;
 
         private Button back;
         private string backString;
@@ -53,6 +55,7 @@ namespace BattleOfFaiths.Game.Screens
         public void LoadContent(ContentManager Content)
         {
             font = Content.Load<SpriteFont>("Fonts/font");
+            gameLoadBackgroundImage = Content.Load<Texture2D>("Backgrounds/Load");
             foreach (Button button in buttons)
             {
                 button.LoadContent(Content);
@@ -75,6 +78,7 @@ namespace BattleOfFaiths.Game.Screens
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
+            spriteBatch.Draw(gameLoadBackgroundImage, bgPosition, Color.White);
             if (anyGames)
             {
                 foreach (Button button in buttons)

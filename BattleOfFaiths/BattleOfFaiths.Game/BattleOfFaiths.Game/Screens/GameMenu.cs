@@ -50,7 +50,7 @@ namespace BattleOfFaiths.Game.Screens
             characters = new List<CharacterBlock>();
             for (int i = 0; i < charactersList.Count; i++)
             {
-                characters.Add(new CharacterBlock(charactersList[i], new Vector2(30, 60 + i * 100)));
+                characters.Add(new CharacterBlock(charactersList[i], new Vector2(15, 15 + i * 150)));
             }
             foreach (CharacterBlock cb in characters)
             {
@@ -81,7 +81,7 @@ namespace BattleOfFaiths.Game.Screens
             {
                 button.LoadContent(Content);
             }
-            gameMenuBackgroundImage = Content.Load<Texture2D>("Backgrounds/main3");
+            gameMenuBackgroundImage = Content.Load<Texture2D>("Backgrounds/skul");
 
             shopScreen.LoadContent(Content);
             foreach (CharacterBlock cb in characters)

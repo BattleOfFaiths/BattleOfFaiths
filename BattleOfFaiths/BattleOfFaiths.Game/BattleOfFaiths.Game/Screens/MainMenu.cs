@@ -79,7 +79,7 @@ namespace BattleOfFaiths.Game.Screens
             {
                 button.LoadContent(Content);
             }
-            mainBackgroundImage = Content.Load<Texture2D>("Backgrounds/main");
+            mainBackgroundImage = Content.Load<Texture2D>("Backgrounds/main3");
 
             loadGameScreen.LoadContent(Content);
             //if (GameAuth.HasStartedGame())
