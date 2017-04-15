@@ -53,7 +53,7 @@ namespace BattleOfFaiths.Game.Screens
             font = Content.Load<SpriteFont>("Fonts/font");
             font1 = Content.Load<SpriteFont>("Fonts/font1");
             bg = didWin
-                ? Content.Load<Texture2D>("Backgrounds/main3")
+                ? Content.Load<Texture2D>("Backgrounds/main4")
                 : Content.Load<Texture2D>("Backgrounds/main2");
         }
 

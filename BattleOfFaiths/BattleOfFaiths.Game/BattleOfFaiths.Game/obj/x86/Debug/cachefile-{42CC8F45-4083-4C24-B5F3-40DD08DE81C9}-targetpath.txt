@@ -65,7 +65,6 @@ Content\Sprites\Items\mana50.xnb
 Content\Backgrounds\Load.xnb
 Content\Backgrounds\main3.xnb
 Content\Backgrounds\sho1.xnb
-Content\Backgrounds\main.xnb
 Content\Sprites\Items\BasicAttack.xnb
-Content\Backgrounds\1.xnb
 Content\Backgrounds\skul.xnb
+Content\Backgrounds\main4.xnb

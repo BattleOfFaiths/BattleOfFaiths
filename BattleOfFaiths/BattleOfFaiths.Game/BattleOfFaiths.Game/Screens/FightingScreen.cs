@@ -129,6 +129,10 @@ namespace BattleOfFaiths.Game.Screens
             {
                 atk.Update();
             }
+            foreach (Bar b in bars)
+            {
+                b.Update();
+            }
             fighter.Update(gameTime);
             enemy.Update(gameTime);
             control.Update(gameTime, Content);
@@ -181,10 +185,10 @@ namespace BattleOfFaiths.Game.Screens
 
         private void InitializeBars()
         {
-            playerHealthBar = new Bar("health", new Vector2(20, 20), GetCharacterCharacteristicsByName("fighter", fight, "health"), 0);
-            enemyHealthBar = new Bar("health", new Vector2(420, 20), GetCharacterCharacteristicsByName("enemy", fight, "health"), 1);
-            playerManaBar = new Bar("mana", new Vector2(20, 60), GetCharacterCharacteristicsByName("fighter", fight, "mana"), 0);
-            enemyManaBar = new Bar("mana", new Vector2(420, 60), GetCharacterCharacteristicsByName("enemy", fight, "mana"), 1);
+            playerHealthBar = new Bar("health", new Vector2(20, 20), control.PlayerHealth, 0, control);
+            enemyHealthBar = new Bar("health", new Vector2(420, 20), control.EnemyHealth, 1, control);
+            playerManaBar = new Bar("mana", new Vector2(20, 60), control.PlayerMana, 0, control);
+            enemyManaBar = new Bar("mana", new Vector2(420, 60), control.EnemyMana, 1, control);
             bars = new List<Bar>();
             bars.Add(playerHealthBar);
             bars.Add(enemyHealthBar);

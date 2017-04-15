@@ -101,7 +101,7 @@
     <Compile Include="Screens\GameMenu.cs" />
     <Compile Include="Screens\LoadGameScreen.cs" />
     <Compile Include="Components\Button.cs" />
-    <Compile Include="Data\BattleOfFaithsEntities.cs" />
+    <Compile Include="Components\Data\BattleOfFaithsEntities.cs" />
     <Compile Include="Screens\MainMenu.cs" />
     <Compile Include="Helpers\GameAuth.cs" />
     <Compile Include="Helpers\StaticBooleans.cs" />

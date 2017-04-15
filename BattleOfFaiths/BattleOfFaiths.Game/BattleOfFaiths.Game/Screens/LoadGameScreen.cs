@@ -14,7 +14,6 @@ namespace BattleOfFaiths.Game.Screens
     {
         private static SpriteFont font;
         private Texture2D gameLoadBackgroundImage;
-        private Vector2 bgPosition;
 
         private Button back;
         private string backString;
@@ -78,7 +77,7 @@ namespace BattleOfFaiths.Game.Screens
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            spriteBatch.Draw(gameLoadBackgroundImage, bgPosition, Color.White);
+            spriteBatch.Draw(gameLoadBackgroundImage, Vector2.Zero, Color.White);
             if (anyGames)
             {
                 foreach (Button button in buttons)
