@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
@@ -13,27 +14,29 @@ namespace BattleOfFaiths.Game.Components
         private Texture2D bar;
         private string type;
         private Vector2 position;
-        private int quantity, isEnemy;
+        private int isEnemy;
+        private float quantity;
         private Color color;
-        private float multiplier;
-        private Vector2 startPoint;
-        private Vector2 endPoint;
-        //private Rectangle sourceRect;
+        private Rectangle sourceRect;
+        private Control control;
+        private float total;
 
-        public Bar(string type, Vector2 position, int quantity, int isEnemy)
+        public Bar(string type, Vector2 position, float quantity, int isEnemy, Control control)
         {
             this.type = type;
             this.position = position;
             this.quantity = quantity;
             this.isEnemy = isEnemy;
+            this.control = control;
         }
 
         public void InitializeBar()
         {
             color = this.type == "mana" ? Color.Blue : Color.Red;
-            multiplier = 350 / quantity;
-            startPoint = position;
-            endPoint = new Vector2(position.X + 350, position.Y);
+            total = quantity;
+            sourceRect = type == "mana"
+                ? new Rectangle((int) position.X, (int) position.Y, 350, 17)
+                : new Rectangle((int) position.X, (int) position.Y, 350, 34);
         }
 
         public void LoadContent(ContentManager Content)
@@ -47,27 +50,39 @@ namespace BattleOfFaiths.Game.Components
             }
         }
 
-        public void Update(int decreaseAmount)
+        public void Update()//int decreaseAmount)
         {
-            if (isEnemy == 0)
-                startPoint.X += multiplier * decreaseAmount;
-            else
-                endPoint.X -= multiplier * decreaseAmount;
+            float percentage = 0f;
 
-            //sourceRect = new Rectangle(
-            //    (int) startPoint.X,
-            //    (int) endPoint.Y,
-            //    (int) (endPoint.X - startPoint.X),
-            //    (int) (endPoint.Y - startPoint.Y));
+            if (type == "mana" && isEnemy == 0)
+            {
+                quantity = control.PlayerMana;
+                percentage = (quantity / total) * 100f;
+            }
+            else if (type == "mana" && isEnemy == 1)
+            {
+                quantity = control.EnemyMana;
+                percentage = (quantity / total) * 100f;
+            }
+            else if (type == "health" && isEnemy == 0)
+            {
+                quantity = control.PlayerHealth;
+                percentage = (quantity / total) * 100f;
+            }
+            else if (type == "health" && isEnemy == 1)
+            {
+                quantity = control.EnemyHealth;
+                percentage = (quantity / total) * 100f;
+            }
+            
+            float value = (percentage * 350f) / 100f;
+
+            sourceRect = new Rectangle((int)position.X, (int)position.Y, (int)value, bar.Height);
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(
-                bar, 
-                position,
-                //sourceRect,
-                color);
+            spriteBatch.Draw(bar, sourceRect, color);
         }
     }
 }

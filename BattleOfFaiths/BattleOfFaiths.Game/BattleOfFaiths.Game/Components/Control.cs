@@ -21,11 +21,15 @@ namespace BattleOfFaiths.Game.Components
         private Fight fight;
         private Fighter fighter;
         private Enemy enemy;
-        private bool changeTurn = false, endFight = false, waitingDone = false, winLoseDone = false;
+        private bool changeTurn = false;
+        private bool endFight = false;
+        private bool waitingDone = false;
+        private bool winLoseDone = false;
         private double counter = 0d;
         private double endFightCounter = 0d;
         private double winLoseCounter = 0d;
         private int playerHealth, enemyHealth, playerMana, enemyMana;
+        private int playerMaxHealth, enemyMaxHealth, playerMaxMana, enemyMaxMana;
         private int playerAtk, enemyAtk, playerSpAtk, enemySpAtk;
         private EndFightScreen endFightScreen;
         private int highscoreMade;
@@ -62,12 +66,12 @@ namespace BattleOfFaiths.Game.Components
         public void Initialize()
         {
             FillFightCharacteristics(fight, fighter, enemy);
-            playerHealth = GetStats(fight, "playerHealth");
-            playerMana = GetStats(fight, "playerMana");
+            playerMaxHealth = playerHealth = GetStats(fight, "playerHealth");
+            playerMaxMana = playerMana = GetStats(fight, "playerMana");
             playerAtk = GetStats(fight, "playerAtk");
             playerSpAtk = GetStats(fight, "playerSpAtk");
-            enemyHealth = GetStats(fight, "enemyHealth");
-            enemyMana = GetStats(fight, "enemyMana");
+            enemyMaxHealth = enemyHealth = GetStats(fight, "enemyHealth");
+            enemyMaxMana = enemyMana = GetStats(fight, "enemyMana");
             enemyAtk = GetStats(fight, "enemyAtk");
             enemySpAtk = GetStats(fight, "enemySpAtk");
         }
@@ -147,20 +151,33 @@ namespace BattleOfFaiths.Game.Components
             if (DidDefend())
             {
                 fighter.Defence.Active = true;
-                playerHealth += enemyAtk / 3;
-                enemyMana += enemyAtk;
+                if (playerHealth + enemyAtk / 3 > playerMaxHealth)
+                    playerHealth = playerMaxHealth;
+                else
+                    playerHealth += enemyAtk / 3;
+                if (enemyMana + enemyAtk > enemyMaxMana)
+                    enemyMana = enemyMaxMana;
+                else
+                    enemyMana += enemyAtk;
             }
             else
             {
                 fighter.Hit.Active = true;
-                enemyMana += enemyAtk;
-                playerHealth -= enemyAtk;
+
+                if (enemyMana + enemyAtk > enemyMaxMana)
+                    enemyMana = enemyMaxMana;
+                else
+                    enemyMana += enemyAtk;
+
                 if (playerHealth - enemyAtk <= 0)
                 {
+                    playerHealth = 0;
                     this.didWin = false;
                     endFight = true;
                     //YouLose();
                 }
+                else
+                    playerHealth -= enemyAtk;
             }
         }
 
@@ -171,24 +188,28 @@ namespace BattleOfFaiths.Game.Components
             if (DidDefend())
             {
                 fighter.Defence.Active = true;
-                playerHealth += enemySpAtk / 3;
+                if (playerHealth + enemySpAtk / 3 > playerMaxHealth)
+                    playerHealth = playerMaxHealth;
+                else
+                    playerHealth += enemySpAtk / 3;
             }
             else
             {
                 fighter.Hit.Active = true;
-                playerHealth -= enemySpAtk;
                 if (playerHealth - enemySpAtk <= 0)
                 {
+                    playerHealth = 0;
                     this.didWin = false;
                     endFight = true;
                     //YouLose();
                 }
+                else
+                    playerHealth -= enemySpAtk;
             }
         }
 
         private void YouLose(GameTime gameTime)
         {
-            playerHealth = 0;
             fighter.Lose.Active = true;
             enemy.Win.Active = true;
             WaitWinLoseReaction(gameTime);
@@ -206,18 +227,24 @@ namespace BattleOfFaiths.Game.Components
             if (DidDefend())
             {
                 enemy.Defence.Active = true;
-                enemyHealth += playerSpAtk / 3;
+                if (enemyHealth + playerSpAtk / 3 > enemyMaxHealth)
+                    enemyHealth = enemyMaxHealth;
+                else
+                    enemyHealth += playerSpAtk / 3;
             }
             else
             {
                 enemy.Hit.Active = true;
-                enemyHealth -= playerSpAtk;
+                
                 if (enemyHealth - playerSpAtk <= 0)
                 {
+                    enemyHealth = 0;
                     this.didWin = true;
                     endFight = true;
                     //YouWin();
                 }
+                else
+                    enemyHealth -= playerSpAtk;
             }
         }
 
@@ -227,27 +254,37 @@ namespace BattleOfFaiths.Game.Components
             if (DidDefend())
             {
                 enemy.Defence.Active = true;
-                enemyHealth += playerAtk / 3;
-                playerMana += playerAtk;
+                if (enemyHealth + playerAtk / 3 > enemyMaxHealth)
+                    enemyHealth = enemyMaxHealth;
+                else
+                    enemyHealth += playerAtk / 3;
+                if (playerMana + playerAtk > playerMaxMana)
+                    playerMana = playerMaxMana;
+                else
+                    playerMana += playerAtk;
             }
             else
             {
                 enemy.Hit.Active = true;
-                playerMana += playerAtk;
-                enemyHealth -= playerAtk;
+                if (playerMana + playerAtk > playerMaxMana)
+                    playerMana = playerMaxMana;
+                else
+                    playerMana += playerAtk;
+
                 if (enemyHealth - playerAtk <= 0)
                 {
+                    enemyHealth = 0;
                     this.didWin = true;
                     endFight = true;
-                    
                     //YouWin();
                 }
+                else
+                    enemyHealth -= playerAtk;
             }
         }
 
         private void YouWin(GameTime gameTime)
         {
-            playerHealth = 0;
             enemy.Lose.Active = true;
             fighter.Win.Active = true;
             WaitWinLoseReaction(gameTime);
@@ -332,14 +369,14 @@ namespace BattleOfFaiths.Game.Components
                 var currentFighter = context.Characters.FirstOrDefault(c => c.Name == fighter.Character.Name);
                 var currentEnemy = context.Characters.FirstOrDefault(c => c.Name == enemy.Character.Name);
 
-                currentFight.playerHealth = currentFighter.Health;
-                currentFight.playerMana = currentFighter.Mana;
-                currentFight.playerAtkDmg = currentFighter.Attack;
-                currentFight.playerSpAtkDmg = currentFighter.SpecAttack;
-                currentFight.enemyHealth = currentEnemy.Health;
-                currentFight.enemyMana = currentEnemy.Mana;
-                currentFight.enemyAtkDmg = currentEnemy.Attack;
-                currentFight.enemySpAtkDmg = currentEnemy.SpecAttack;
+                currentFight.playerHealth = currentFighter.Health * (currentFighter.Level + 2);
+                currentFight.playerMana = currentFighter.Mana * (currentFighter.Level + 2);
+                currentFight.playerAtkDmg = currentFighter.Attack * (currentFighter.Level + 1);
+                currentFight.playerSpAtkDmg = currentFighter.SpecAttack * (currentFighter.Level + 1);
+                currentFight.enemyHealth = currentEnemy.Health * (currentFighter.Level + 2);
+                currentFight.enemyMana = currentEnemy.Mana * (currentFighter.Level + 2);
+                currentFight.enemyAtkDmg = currentEnemy.Attack * (currentFighter.Level + 1);
+                currentFight.enemySpAtkDmg = currentEnemy.SpecAttack * (currentFighter.Level + 1);
                 context.SaveChanges();
             }
         }

@@ -17,7 +17,6 @@ namespace BattleOfFaiths.Game.Screens
     {
         private SpriteFont font;
         private Texture2D gameShopBackgroundImage;
-        private Vector2 bgPosition;
 
         private Button close;
         private string closeString;
@@ -89,7 +88,7 @@ namespace BattleOfFaiths.Game.Screens
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            spriteBatch.Draw(gameShopBackgroundImage, bgPosition, Color.White);
+            spriteBatch.Draw(gameShopBackgroundImage, Vector2.Zero, Color.White);
             foreach (ShopItem si in items)
             {
                 si.Draw(spriteBatch);
