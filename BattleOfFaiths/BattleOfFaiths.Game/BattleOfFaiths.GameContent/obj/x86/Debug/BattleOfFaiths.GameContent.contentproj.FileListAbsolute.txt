@@ -6,3 +6,4 @@ C:\Users\steff\Desktop\test\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\Ba
 C:\softuni\Project3\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\obj\x86\Debug\BattleOfFaiths.GameContent.contentprojResolveAssemblyReference.cache
 C:\Users\steff\Desktop\bat\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\obj\x86\Debug\BattleOfFaiths.GameContent.contentprojResolveAssemblyReference.cache
 C:\softuni\Project4\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\obj\x86\Debug\BattleOfFaiths.GameContent.contentprojResolveAssemblyReference.cache
+C:\Users\steff\Desktop\Game\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.GameContent\obj\x86\Debug\BattleOfFaiths.GameContent.contentprojResolveAssemblyReference.cache

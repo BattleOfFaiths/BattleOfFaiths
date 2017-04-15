@@ -8,6 +8,7 @@ namespace BattleOfFaiths.Game.Helpers
     public class StaticBooleans
     {
         public static bool IsLoadGamesOn;
+        public static bool IsStatGamesOn;
         public static bool HasNewGame;
         public static bool IsShopOpen;
         public static bool IsGameMenuInitialized;
@@ -23,6 +24,10 @@ namespace BattleOfFaiths.Game.Helpers
         public static void SetLoadGamesBool(bool value)
         {
             IsLoadGamesOn = value;
+        }
+        public static void SetStatBool(bool value)
+        {
+            IsStatGamesOn = value;
         }
 
         public static void SetHasNewGame(bool value)

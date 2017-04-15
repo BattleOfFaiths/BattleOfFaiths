@@ -90,6 +90,7 @@ namespace BattleOfFaiths.Game.Components
                             StaticBooleans.SetLoadGamesBool(true);
                             break;
                         case "Statistics":
+                            StaticBooleans.SetStatBool(true);
                             break;
                         case "Fight":
                             StartFight(this.character, GameAuth.GetCurrentGame());
@@ -108,6 +109,7 @@ namespace BattleOfFaiths.Game.Components
                             {
                                 GameAuth.EndGame();
                                 StaticBooleans.SetLoadGamesBool(false);
+                                StaticBooleans.SetStatBool(false);
                             }
                             break;
                         default:

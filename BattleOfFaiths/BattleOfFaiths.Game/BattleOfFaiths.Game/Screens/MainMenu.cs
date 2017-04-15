@@ -21,6 +21,7 @@ namespace BattleOfFaiths.Game.Screens
 
         GameMenu gameMenu = new GameMenu();
         LoadGameScreen loadGameScreen = new LoadGameScreen();
+        StatGameScreen loadStatGameScreen = new StatGameScreen();
 
         private Button newGame;
         private Button loadGame;
@@ -67,6 +68,7 @@ namespace BattleOfFaiths.Game.Screens
             buttons.Add(statistics);
 
             loadGameScreen.Initialize();
+            loadStatGameScreen.Initialize();
 
             //if (GameAuth.HasStartedGame())
             //    gameMenu.Initialize();
@@ -82,6 +84,7 @@ namespace BattleOfFaiths.Game.Screens
             mainBackgroundImage = Content.Load<Texture2D>("Backgrounds/main3");
 
             loadGameScreen.LoadContent(Content);
+            loadStatGameScreen.LoadContent(Content);
             //if (GameAuth.HasStartedGame())
             //    gameMenu.LoadContent(Content);
         }
@@ -102,6 +105,14 @@ namespace BattleOfFaiths.Game.Screens
                 StaticBooleans.SetHasNewGame(false);
             }
             if (StaticBooleans.IsLoadGamesOn && !StaticBooleans.IsShopOpen) loadGameScreen.Update();
+            if (StaticBooleans.IsStatGamesOn)
+            {
+                loadStatGameScreen.Initialize();
+                loadStatGameScreen.LoadContent(Content);
+                StaticBooleans.SetHasNewGame(false);
+
+            }
+            if (StaticBooleans.IsStatGamesOn && !StaticBooleans.IsShopOpen) loadStatGameScreen.Update();
             if (GameAuth.HasStartedGame() && !StaticBooleans.IsGameMenuInitialized)
             {
                 gameMenu.Initialize();
@@ -122,6 +133,10 @@ namespace BattleOfFaiths.Game.Screens
             else if (StaticBooleans.IsLoadGamesOn)
             {
                 loadGameScreen.Draw(spriteBatch);
+            }
+            else if (StaticBooleans.IsStatGamesOn)
+            {
+                loadStatGameScreen.Draw(spriteBatch);
             }
             else
             {
