@@ -92,6 +92,7 @@
     <Compile Include="Components\DrawNames.cs" />
     <Compile Include="Components\Enemy.cs" />
     <Compile Include="Components\Fighter.cs" />
+    <Compile Include="Components\GameItem.cs" />
     <Compile Include="Components\Map.cs" />
     <Compile Include="Components\ShopItem.cs" />
     <Compile Include="Helpers\FightAuth.cs" />

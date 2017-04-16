@@ -55,9 +55,9 @@ namespace BattleOfFaiths.Game.Components
             num = rnd.Next(1, enemies.Count);
             enemy = enemies[num];
             enemyPosition = new Vector2(500, 220);
-            basicAttackPosition = new Vector2(210, 220);
+            basicAttackPosition = new Vector2(230, 220);
             basicAttack.Initialize(basicAttackPosition, new Vector2(GetCharacterActionFrames("Basic", enemy), 1));
-            specialAttackPosition = new Vector2(210, 220);
+            specialAttackPosition = new Vector2(230, 220);
             specialAttack.Initialize(specialAttackPosition, new Vector2(GetCharacterActionFrames("Special", enemy), 1));
             defencePosition = new Vector2(500, 220);
             defence.Initialize(defencePosition, new Vector2(GetCharacterActionFrames("Defence", enemy), 1));

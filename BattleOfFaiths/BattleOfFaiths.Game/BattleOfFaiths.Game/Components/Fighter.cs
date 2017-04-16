@@ -52,18 +52,18 @@ namespace BattleOfFaiths.Game.Components
 
         public void Initialize()
         {
-            fighterPosition = new Vector2(175, 220);
-            basicAttackPosition = new Vector2(410, 220);
+            fighterPosition = new Vector2(135, 220);
+            basicAttackPosition = new Vector2(400, 220);
             basicAttack.Initialize(basicAttackPosition, new Vector2(GetCharacterActionFrames("Basic", character), 1));
-            specialAttackPosition = new Vector2(410, 220);
+            specialAttackPosition = new Vector2(400, 220);
             specialAttack.Initialize(specialAttackPosition, new Vector2(GetCharacterActionFrames("Special", character), 1));
-            defencePosition = new Vector2(175, 220);
+            defencePosition = new Vector2(135, 220);
             defence.Initialize(defencePosition, new Vector2(GetCharacterActionFrames("Defence", character), 1));
-            winPosition = new Vector2(175, 220);
+            winPosition = new Vector2(135, 220);
             win.Initialize(winPosition, new Vector2(GetCharacterActionFrames("Win", character), 1));
-            losePosition = new Vector2(175, 220);
+            losePosition = new Vector2(135, 220);
             lose.Initialize(losePosition, new Vector2(GetCharacterActionFrames("Lose", character), 1));
-            hitPosition = new Vector2(175, 220);
+            hitPosition = new Vector2(135, 220);
             hit.Initialize(hitPosition, new Vector2(GetCharacterActionFrames("Hit", character), 1));
         }
 
