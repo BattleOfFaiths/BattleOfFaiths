@@ -72,7 +72,9 @@ namespace BattleOfFaiths.Game.Components
                 if (StaticBooleans.IsShopOpen)
                 {
                     if (item != null && this.item.Price > GameAuth.GetCurrentGame().Money)
-                            color = new Color(161, 161,161);
+                        color = new Color(161, 161, 161);
+                    else if (item != null && BagOver4(GameAuth.GetCurrentGame()))
+                        color = new Color(161, 161, 161);
                 }
             }
             else
@@ -150,10 +152,19 @@ namespace BattleOfFaiths.Game.Components
 
         private void BuyIfPossible(Item item, Models.Game game)
         {
-            if (item.Price <= game.Money)
+            if (item.Price <= game.Money || game.Items.Count < 4)
             {
                 BuyIt(item.Id, game.Id);
                 DecreaseMoney(game.Id, item.Price);
+            }
+        }
+
+        private bool BagOver4(Models.Game game)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentGame = context.Games.FirstOrDefault(g => g.Id == game.Id);
+                return currentGame.Items.Count >= 4;
             }
         }
 

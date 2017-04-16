@@ -12,6 +12,7 @@ using BattleOfFaiths.Game.Screens;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace BattleOfFaiths.Game.Components
 {
@@ -34,13 +35,18 @@ namespace BattleOfFaiths.Game.Components
         private EndFightScreen endFightScreen;
         private int highscoreMade;
         private bool hasFightEnded, hasEndBeenInitialized, didWin;
+        private List<GameItem> gameItems;
+        private KeyboardState keyState;
+        private KeyboardState prevKeyState;
+        private bool maxDefence = false;
 
-        public Control(Fight fight, Fighter fighter, Enemy enemy)
+        public Control(Fight fight, Fighter fighter, Enemy enemy, List<GameItem> gameItems)
         {
             this.fight = fight;
             this.fighter = fighter;
             this.enemy = enemy;
             this.turn = 0;
+            this.gameItems = gameItems;
         }
 
         public int PlayerHealth => playerHealth;
@@ -97,6 +103,30 @@ namespace BattleOfFaiths.Game.Components
                     {
                         if (this.Turn == 0)
                         {
+                            prevKeyState = keyState;
+                            keyState = Keyboard.GetState();
+
+                            if (keyState.IsKeyDown(Keys.D1) && prevKeyState.IsKeyUp(Keys.D1))
+                            {
+                                UseItem(gameItems[0]);
+                                gameItems[0].IsUsed = true;
+                            }
+                            if (keyState.IsKeyDown(Keys.D2) && prevKeyState.IsKeyUp(Keys.D2))
+                            {
+                                UseItem(gameItems[1]);
+                                gameItems[1].IsUsed = true;
+                            }
+                            if (keyState.IsKeyDown(Keys.D3) && prevKeyState.IsKeyUp(Keys.D3))
+                            {
+                                UseItem(gameItems[2]);
+                                gameItems[2].IsUsed = true;
+                            }
+                            if (keyState.IsKeyDown(Keys.D4) && prevKeyState.IsKeyUp(Keys.D4))
+                            {
+                                UseItem(gameItems[3]);
+                                gameItems[3].IsUsed = true;
+                            }
+
                             if (fighter.BasicAttack.Active)
                             {
                                 FighterBasicAttack(gameTime);
@@ -132,6 +162,7 @@ namespace BattleOfFaiths.Game.Components
                     EndFightPause(gameTime);
                     if (waitingDone)
                     {
+                        SaveBagToDatabase(GameAuth.GetCurrentGame(), gameItems);
                         if (didWin) YouWin(gameTime);
                         else YouLose(gameTime);
                     }
@@ -139,16 +170,50 @@ namespace BattleOfFaiths.Game.Components
             }
         }
 
+        private void UseItem(GameItem gameItem)
+        {
+            if (!gameItem.IsUsed)
+            {
+                if (gameItem.Item.Name == "Health +50")
+                {
+                    if (playerHealth + 50 > playerMaxHealth)
+                        playerHealth = playerMaxHealth;
+                    else
+                        playerHealth += 50;
+                }
+                else if (gameItem.Item.Name == "Health-Full")
+                    playerHealth = playerMaxHealth;
+                else if (gameItem.Item.Name == "Mana +50")
+                {
+                    if (playerMana + 50 > playerMaxMana)
+                        playerMana = playerMaxMana;
+                    else
+                        playerMana += 50;
+                }
+                else if (gameItem.Item.Name == "Mana +100")
+                {
+                    if (playerMana + 100 > playerMaxMana)
+                        playerMana = playerMaxMana;
+                    else
+                        playerMana += 100;
+                }
+                else if (gameItem.Item.Name == "Max Defence")
+                    maxDefence = true;
+                else if (gameItem.Item.Name == "Attack +100")
+                    playerAtk += 100;
+            }
+        }
+
         public void Draw(SpriteBatch spriteBatch)
         {
             if (hasEndBeenInitialized)
-                endFightScreen.Draw(spriteBatch);
+                endFightScreen.Draw(spriteBatch);            
         }
 
         private void EnemyBasicAttack(GameTime gameTime)
         {
             enemy.BasicAttack.Active = true;
-            if (DidDefend())
+            if (DidDefend() || maxDefence)
             {
                 fighter.Defence.Active = true;
                 if (playerHealth + enemyAtk / 3 > playerMaxHealth)
@@ -185,7 +250,7 @@ namespace BattleOfFaiths.Game.Components
         {
             enemy.SpecialAttack.Active = true;
             enemyMana -= enemySpAtk;
-            if (DidDefend())
+            if (DidDefend() || maxDefence)
             {
                 fighter.Defence.Active = true;
                 if (playerHealth + enemySpAtk / 3 > playerMaxHealth)
@@ -298,7 +363,7 @@ namespace BattleOfFaiths.Game.Components
         private void Wait(GameTime gameTime)
         {
             this.counter += gameTime.ElapsedGameTime.TotalSeconds;
-            if (this.counter > 2)
+            if (this.counter > 1)
             {
                 this.Turn = this.Turn == 0 ? 1 : 0;
                 this.counter = 0;
@@ -318,7 +383,7 @@ namespace BattleOfFaiths.Game.Components
         private void WaitWinLoseReaction(GameTime gameTime)
         {
             this.winLoseCounter += gameTime.ElapsedGameTime.TotalSeconds;
-            if (this.winLoseCounter > 2)
+            if (this.winLoseCounter > 1)
             {
                 winLoseDone = true;
             }
@@ -393,6 +458,23 @@ namespace BattleOfFaiths.Game.Components
                 currentFight.playerMana = playerMana;
                 currentFight.enemyHealth = enemyHealth;
                 currentFight.enemyMana = enemyMana;
+                context.SaveChanges();
+            }
+        }
+
+        private void SaveBagToDatabase(Models.Game game, List<GameItem> items)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentGame = context.Games.FirstOrDefault(g => g.Id == game.Id);
+                foreach (GameItem gi in items)
+                {
+                    if (gi.IsUsed)
+                    {
+                        var item = context.Items.FirstOrDefault(i => i.Id == gi.Item.Id);
+                        currentGame.Items.Remove(item);
+                    }
+                }
                 context.SaveChanges();
             }
         }

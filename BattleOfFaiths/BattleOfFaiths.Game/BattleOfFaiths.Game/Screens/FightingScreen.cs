@@ -46,12 +46,15 @@ namespace BattleOfFaiths.Game.Screens
         private Vector2 enemySpAtkPos;
         //test
 
-        //private List<Item> items;
+        private List<Item> itemsInBag;
+        private List<GameItem> gameItems;
 
         private Map map = new Map();
 
         private List<Bar> bars;
         private Bar playerHealthBar, enemyHealthBar, playerManaBar, enemyManaBar;
+
+        public int screenHeight => GraphicsDeviceManager.DefaultBackBufferHeight;
 
         public void Initialize()
         {
@@ -71,7 +74,21 @@ namespace BattleOfFaiths.Game.Screens
             drawNames = new DrawNames(fighter.Character, enemy.Character);
             drawNames.Initialize();
 
-            control = new Control(fight, fighter, enemy);
+            itemsInBag = new List<Item>();
+            itemsInBag = GetGameItems(GameAuth.GetCurrentGame());
+            gameItems = new List<GameItem>();
+            int offset = 0;
+            foreach (Item i in itemsInBag)
+            {
+                gameItems.Add(new GameItem(i, new Vector2(130 + offset, screenHeight - 100)));
+                offset += 150;
+            }
+            foreach (GameItem gi in gameItems)
+            {
+                gi.Initialize();
+            }
+
+            control = new Control(fight, fighter, enemy, gameItems);
             control.Initialize();
 
             InitializeBars();
@@ -84,7 +101,7 @@ namespace BattleOfFaiths.Game.Screens
 
             //test
 
-            playerHealth = control.PlayerHealth.ToString();
+                playerHealth = control.PlayerHealth.ToString();
                 playerHealthPos = new Vector2(10, 100);
                 playerMana = control.PlayerMana.ToString();
                 playerManaPos = new Vector2(10, 120); 
@@ -106,6 +123,12 @@ namespace BattleOfFaiths.Game.Screens
 
         public void LoadContent(ContentManager Content)
         {
+
+            foreach (GameItem gi in gameItems)
+            {
+                gi.LoadContent(Content);
+            }
+
             map.LoadContent(Content);
             fighter.LoadContent(Content);
             enemy.LoadContent(Content);
@@ -125,6 +148,12 @@ namespace BattleOfFaiths.Game.Screens
 
         public void Update(GameTime gameTime, ContentManager Content)
         {
+
+            foreach (GameItem gi in gameItems)
+            {
+                gi.Update();
+            }
+
             foreach (var atk in attacks)
             {
                 atk.Update();
@@ -163,6 +192,12 @@ namespace BattleOfFaiths.Game.Screens
                 fighter.Draw(spriteBatch);
                 enemy.Draw(spriteBatch);
                 drawNames.Draw(spriteBatch);
+
+                foreach (GameItem gi in gameItems)
+                {
+                    gi.Draw(spriteBatch);
+                }
+
                 foreach (var atk in attacks)
                 {
                     atk.Draw(spriteBatch);
@@ -197,6 +232,17 @@ namespace BattleOfFaiths.Game.Screens
             foreach (Bar b in bars)
             {
                 b.InitializeBar();
+            }
+        }
+
+        private List<Item> GetGameItems(Models.Game game)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentGame = context.Games.FirstOrDefault(g => g.Id == game.Id);
+                var items = currentGame.Items.Take(4).ToList();
+
+                return items;
             }
         }
 
