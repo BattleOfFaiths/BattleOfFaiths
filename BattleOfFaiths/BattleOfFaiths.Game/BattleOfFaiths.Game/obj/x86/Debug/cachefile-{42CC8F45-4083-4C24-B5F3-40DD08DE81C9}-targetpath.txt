@@ -74,3 +74,4 @@ Content\Sprites\SmallItems\heart50.xnb
 Content\Sprites\SmallItems\heartFull.xnb
 Content\Sprites\SmallItems\mana100.xnb
 Content\Sprites\SmallItems\mana50.xnb
+Content\Cursor.xnb

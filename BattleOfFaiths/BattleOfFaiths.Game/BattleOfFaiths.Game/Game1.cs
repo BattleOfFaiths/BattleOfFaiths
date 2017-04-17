@@ -21,7 +21,8 @@ namespace BattleOfFaiths.Game
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;        
+        SpriteBatch spriteBatch;
+        Texture2D sprite;
         MainMenu mainMenu = new MainMenu();
         public Game1()
         {
@@ -38,7 +39,7 @@ namespace BattleOfFaiths.Game
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            IsMouseVisible = true;
+            //IsMouseVisible = true;
 
             mainMenu.Initialize();
             base.Initialize();
@@ -52,6 +53,7 @@ namespace BattleOfFaiths.Game
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            sprite = Content.Load<Texture2D>("Cursor");
 
             // TODO: use this.Content to load your game content here
             mainMenu.LoadContent(Content);
@@ -94,6 +96,9 @@ namespace BattleOfFaiths.Game
             // TODO: Add your drawing code here
 
             mainMenu.Draw(spriteBatch, Content);
+            spriteBatch.Begin();
+            spriteBatch.Draw(sprite, new Vector2(Mouse.GetState().X, Mouse.GetState().Y), Color.White);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
