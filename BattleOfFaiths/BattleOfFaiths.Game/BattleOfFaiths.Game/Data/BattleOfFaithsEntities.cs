@@ -13,6 +13,7 @@ namespace BattleOfFaiths.Game.Data
             : base("name=BattleOfFaithsEntities")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<BattleOfFaithsEntities, Configuration>());
+            //Database.SetInitializer(new CreateDatabaseIfNotExists<BattleOfFaithsEntities>());
         }
 
         public virtual DbSet<Character> Characters { get; set; }        

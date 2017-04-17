@@ -80,8 +80,8 @@ namespace BattleOfFaiths.Game.Screens
             int offset = 0;
             foreach (Item i in itemsInBag)
             {
-                gameItems.Add(new GameItem(i, new Vector2(130 + offset, screenHeight - 100)));
-                offset += 150;
+                gameItems.Add(new GameItem(i, new Vector2(210 + offset, screenHeight - 80)));
+                offset += 110;
             }
             foreach (GameItem gi in gameItems)
             {

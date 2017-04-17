@@ -41,7 +41,7 @@ namespace BattleOfFaiths.Game.Screens
             fightResultPos = didWin ? new Vector2(500, 50) : new Vector2(100, 220);
             moneyWonPos = didWin ? new Vector2(500, 100) : new Vector2(100, 270);
             highscoreMadePos = didWin ? new Vector2(500, 130) : new Vector2(100, 290);
-            levelValue = GetTotalHighscore(GameAuth.GetCurrentGame(), fighter.Character);
+            levelValue = GetTotalHighscore(GameAuth.GetCurrentGame(), fighter);
             levelUpString = "You leveled up - Level: " + levelValue;
             levelUpStringPos = didWin ? new Vector2(500, 150) : new Vector2(100, 310);
             escape = "Press Escape For Menu";
@@ -64,11 +64,9 @@ namespace BattleOfFaiths.Game.Screens
 
             if (keyState.IsKeyDown(Keys.Escape) && prevKeyState.IsKeyUp(Keys.Escape))
             {
+                StaticBooleans.SetHasNewGame(true);
+                StaticBooleans.SetNeedInitializingBool(true);
                 FightAuth.EndFight();
-            }
-            else if (keyState.IsKeyUp(Keys.Escape) && prevKeyState.IsKeyDown(Keys.Escape))
-            {
-                //false
             }
         }
 
@@ -83,36 +81,38 @@ namespace BattleOfFaiths.Game.Screens
             spriteBatch.DrawString(font, escape, escapePos, color);
         }
 
-        private int GetTotalHighscore(Models.Game game, Character character)
+        private int GetTotalHighscore(Models.Game game, Fighter fighter)
         {
             using (var context = new BattleOfFaithsEntities())
             {
                 var currentGame = context.Games.FirstOrDefault(g => g.Id == game.Id);
-                var currentCharacter = currentGame.Characters.FirstOrDefault(c => c.Id == character.Id);
+                var currentCharacter = currentGame.Characters.FirstOrDefault(c => c.Id == fighter.Character.Id);
                 var currentLevel = currentCharacter.Level;
                 var level = 0;
 
                 var currentHighscore = currentCharacter.Highscore + int.Parse(this.highscoreMade);
-                if (currentHighscore > 5000)
+                if (currentHighscore > 4000)
                     level = 5;
-                else if (currentHighscore > 4000)
-                    level = 4;
                 else if (currentHighscore > 3000)
-                    level = 3;
+                    level = 4;
                 else if (currentHighscore > 2000)
-                    level = 2;
+                    level = 3;
                 else if (currentHighscore > 1000)
+                    level = 2;
+                else if (currentHighscore > 500)
                     level = 1;
 
-                if (currentLevel > level)
+                if (currentLevel < level)
                 {
                     levelUp = true;
                     currentCharacter.Level += 1;
                     moneyWon = (int.Parse(moneyWon) + currentCharacter.Level * 500).ToString();
                 }
 
-                currentGame.Money += int.Parse(moneyWon);
                 currentCharacter.Highscore += int.Parse(this.highscoreMade);
+
+                currentGame.Money += int.Parse(moneyWon);
+                currentGame.HighScore += int.Parse(this.highscoreMade);
                 context.SaveChanges();
 
                 return currentCharacter.Level;

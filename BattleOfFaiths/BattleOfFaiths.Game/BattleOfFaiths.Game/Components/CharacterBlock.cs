@@ -59,16 +59,17 @@ namespace BattleOfFaiths.Game.Components
 
         private string GetFighterData(Character character)
         {
-            //using (var context = new BattleOfFaithsEntities())
-            //{
-                //var ch = context.Characters.FirstOrDefault(c => c.Name == character.Name);
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentCharacter = context.Characters.FirstOrDefault(c => c.Id == character.Id);
+
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine(character.Name);
-                sb.AppendLine($"Level: {character.Level}");
-                sb.AppendLine($"Highscore: {character.Highscore}");
+                sb.AppendLine(currentCharacter.Name);
+                sb.AppendLine($"Level: {currentCharacter.Level}");
+                //sb.AppendLine($"Highscore: {currentCharacter.Highscore}");
 
                 return sb.ToString();
-            //}
+            }
         }
     }
 }

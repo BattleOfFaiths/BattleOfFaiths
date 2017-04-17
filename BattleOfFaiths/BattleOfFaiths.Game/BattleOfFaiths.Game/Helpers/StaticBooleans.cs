@@ -13,12 +13,17 @@ namespace BattleOfFaiths.Game.Helpers
         public static bool IsShopOpen;
         public static bool IsGameMenuInitialized;
         public static bool HasFightBeenInitialized;
-
+        public static bool NeedInitializing = false;
         public static bool MakeBasicAttack;
 
         public static void SetHasFightBeenInitializedBool(bool value)
         {
             HasFightBeenInitialized = value;    
+        }
+
+        public static void SetNeedInitializingBool(bool value)
+        {
+            NeedInitializing = value;
         }
 
         public static void SetLoadGamesBool(bool value)

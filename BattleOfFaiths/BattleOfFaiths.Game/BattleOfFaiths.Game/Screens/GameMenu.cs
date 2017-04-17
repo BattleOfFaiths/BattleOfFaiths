@@ -104,6 +104,15 @@ namespace BattleOfFaiths.Game.Screens
             {
                 foreach (CharacterBlock cb in characters)
                 {
+                    if (StaticBooleans.NeedInitializing)
+                    {
+                        cb.Initialize();
+                        cb.LoadContent(Content);
+                    }
+                }
+                StaticBooleans.SetNeedInitializingBool(false);
+                foreach (CharacterBlock cb in characters)
+                {
                     cb.Update();
                 }
                 foreach (Button button in buttons)

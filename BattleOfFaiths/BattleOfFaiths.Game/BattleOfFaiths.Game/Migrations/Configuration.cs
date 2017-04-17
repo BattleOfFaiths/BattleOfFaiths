@@ -66,8 +66,8 @@ namespace BattleOfFaiths.Game.Migrations
                 EnemySprite = "Al-Position1",
                 Highscore = 0,
                 Health = 100,
-                Mana = 50,
-                Attack = 30,
+                Mana = 80,
+                Attack = 20,
                 SpecAttack = 60
             };
             var Belmont = new Character
@@ -90,9 +90,9 @@ namespace BattleOfFaiths.Game.Migrations
                 EnemySprite = "RabPosition1",
                 Highscore = 0,
                 Health=100,
-                Mana = 10,
+                Mana = 80,
                 Attack = 20,
-                SpecAttack = 80
+                SpecAttack = 60
 
             };
             context.Characters.AddOrUpdate(c => c.Name, Alucard, Belmont, Rebel);

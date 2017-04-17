@@ -69,9 +69,6 @@ namespace BattleOfFaiths.Game.Screens
 
             loadGameScreen.Initialize();
             loadStatGameScreen.Initialize();
-
-            //if (GameAuth.HasStartedGame())
-            //    gameMenu.Initialize();
         }
 
         public void LoadContent(ContentManager Content)
@@ -85,8 +82,6 @@ namespace BattleOfFaiths.Game.Screens
 
             loadGameScreen.LoadContent(Content);
             loadStatGameScreen.LoadContent(Content);
-            //if (GameAuth.HasStartedGame())
-            //    gameMenu.LoadContent(Content);
         }
 
         public void Update(ContentManager Content, GameTime gameTime)
