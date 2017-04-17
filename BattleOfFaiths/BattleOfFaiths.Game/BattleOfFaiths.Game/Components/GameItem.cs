@@ -40,7 +40,7 @@ namespace BattleOfFaiths.Game.Components
 
         public void LoadContent(ContentManager Content)
         {
-            itemPic = Content.Load<Texture2D>("Sprites/Items/" + item.Sprite);
+            itemPic = Content.Load<Texture2D>("Sprites/SmallItems/" + item.Sprite);
         }
 
         public void Update()

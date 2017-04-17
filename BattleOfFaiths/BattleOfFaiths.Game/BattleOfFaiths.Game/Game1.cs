@@ -21,8 +21,7 @@ namespace BattleOfFaiths.Game
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
-        
+        SpriteBatch spriteBatch;        
         MainMenu mainMenu = new MainMenu();
         public Game1()
         {
