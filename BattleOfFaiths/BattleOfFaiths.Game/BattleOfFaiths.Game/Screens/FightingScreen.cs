@@ -26,24 +26,15 @@ namespace BattleOfFaiths.Game.Screens
         private Components.Attack basicAttack;
         private Components.Attack specialAttack;
 
+        private string numberOne, numberTwo, numberThree, numberFour;
+        private Vector2 positionOne, positionTwo, positionThree, positionFour;
+
         //test
         private SpriteFont font;
-        private string playerHealth;
-        private Vector2 playerHealthPos;
-        private string playerMana;
-        private Vector2 playerManaPos;
-        private string playerAtk;
-        private Vector2 playerAtkPos;
-        private string playerSpAtk;
-        private Vector2 playerSpAtkPos;
-        private string enemyHealth;
-        private Vector2 enemyHealthPos;
-        private string enemyMana;
-        private Vector2 enemyManaPos;
-        private string enemyAtk;
-        private Vector2 enemyAtkPos;
-        private string enemySpAtk;
-        private Vector2 enemySpAtkPos;
+        private string playerHealth, playerMana, playerAtk, playerSpAtk;
+        private Vector2 playerHealthPos, playerManaPos, playerAtkPos, playerSpAtkPos;
+        private string enemyHealth, enemyMana, enemyAtk, enemySpAtk;
+        private Vector2 enemyHealthPos, enemyManaPos, enemyAtkPos, enemySpAtkPos;
         //test
 
         private List<Item> itemsInBag;
@@ -102,23 +93,32 @@ namespace BattleOfFaiths.Game.Screens
             //test
 
                 playerHealth = control.PlayerHealth.ToString();
-                playerHealthPos = new Vector2(10, 100);
+                playerHealthPos = new Vector2(20, 25);
                 playerMana = control.PlayerMana.ToString();
-                playerManaPos = new Vector2(10, 120); 
+                playerManaPos = new Vector2(20, 55); 
                 playerAtk = control.PlayerAtk.ToString(); 
-                playerAtkPos = new Vector2(10, 140);
+                playerAtkPos = new Vector2(20, 140);
                 playerSpAtk = control.PlayerSpAtk.ToString(); 
-                playerSpAtkPos = new Vector2(10, 160);
+                playerSpAtkPos = new Vector2(20, 160);
                 enemyHealth = control.EnemyHealth.ToString(); 
-                enemyHealthPos = new Vector2(10, 220);
+                enemyHealthPos = new Vector2(420, 25);
                 enemyMana = control.EnemyMana.ToString(); 
-                enemyManaPos = new Vector2(10, 240);
+                enemyManaPos = new Vector2(420, 55);
                 enemyAtk = control.EnemyAtk.ToString(); 
-                enemyAtkPos = new Vector2(10, 260);
+                enemyAtkPos = new Vector2(700, 140);
                 enemySpAtk = control.EnemySpAtk.ToString(); 
-                enemySpAtkPos = new Vector2(10, 280);
+                enemySpAtkPos = new Vector2(700, 160);
 
             //test
+
+            numberOne = "1";
+            numberTwo = "2";
+            numberThree = "3";
+            numberFour = "4";
+            positionOne = new Vector2(230, screenHeight - 30);
+            positionTwo = new Vector2(340, screenHeight - 30);
+            positionThree = new Vector2(450, screenHeight - 30);
+            positionFour = new Vector2(560, screenHeight - 30);
         }
 
         public void LoadContent(ContentManager Content)
@@ -203,15 +203,20 @@ namespace BattleOfFaiths.Game.Screens
                     atk.Draw(spriteBatch);
                 }
                 //test
-                spriteBatch.DrawString(font, "ph: " + playerHealth, playerHealthPos, Color.White);
-                spriteBatch.DrawString(font, "pm: " + playerMana, playerManaPos, Color.White);
+                spriteBatch.DrawString(font, "ph: " + playerHealth, playerHealthPos, Color.Black);
+                spriteBatch.DrawString(font, "pm: " + playerMana, playerManaPos, Color.Black);
                 spriteBatch.DrawString(font, "pa: " + playerAtk, playerAtkPos, Color.White);
                 spriteBatch.DrawString(font, "ps: " + playerSpAtk, playerSpAtkPos, Color.White);
-                spriteBatch.DrawString(font, "eh: " + enemyHealth, enemyHealthPos, Color.White);
-                spriteBatch.DrawString(font, "em: " + enemyMana, enemyManaPos, Color.White);
+                spriteBatch.DrawString(font, "eh: " + enemyHealth, enemyHealthPos, Color.Black);
+                spriteBatch.DrawString(font, "em: " + enemyMana, enemyManaPos, Color.Black);
                 spriteBatch.DrawString(font, "ea: " + enemyAtk, enemyAtkPos, Color.White);
                 spriteBatch.DrawString(font, "es: " + enemySpAtk, enemySpAtkPos, Color.White);
                 //test
+
+                spriteBatch.DrawString(font, numberOne, positionOne, Color.White);
+                spriteBatch.DrawString(font, numberTwo, positionTwo, Color.White);
+                spriteBatch.DrawString(font, numberThree, positionThree, Color.White);
+                spriteBatch.DrawString(font, numberFour, positionFour, Color.White);
             }
             else
                 control.Draw(spriteBatch);

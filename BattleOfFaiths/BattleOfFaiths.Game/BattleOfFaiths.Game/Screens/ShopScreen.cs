@@ -26,7 +26,8 @@ namespace BattleOfFaiths.Game.Screens
         
         private string moneyString;
         private Vector2 moneyPosition;
-
+        private string bagString;
+        private Vector2 bagPosition;
         public int screenWidth
         {
             get { return GraphicsDeviceManager.DefaultBackBufferWidth; }
@@ -41,6 +42,8 @@ namespace BattleOfFaiths.Game.Screens
         {
             moneyString = "Money: " + GameAuth.GetCurrentGame().Money;
             moneyPosition = new Vector2(30, screenHeight - 60);
+            bagString = "Items in bag: " + GetItemsCount(GameAuth.GetCurrentGame());
+            bagPosition = new Vector2(300, screenHeight - 60);
             
             closeString = "Close";
             closePosition = new Vector2(screenWidth - 100, screenHeight - 60);
@@ -78,6 +81,7 @@ namespace BattleOfFaiths.Game.Screens
         public void Update()
         {
             moneyString = "Money: " + GetAmountOfMoney(GameAuth.GetCurrentGame());
+            bagString = "Items in bag: " + GetItemsCount(GameAuth.GetCurrentGame());
             foreach (ShopItem si in items)
             {
                 si.Update();
@@ -94,6 +98,7 @@ namespace BattleOfFaiths.Game.Screens
                 si.Draw(spriteBatch);
             }
             spriteBatch.DrawString(font, moneyString, moneyPosition, Color.White);
+            spriteBatch.DrawString(font, bagString, bagPosition, Color.White);
             close.Draw(spriteBatch);
             spriteBatch.End();
         }
@@ -112,6 +117,15 @@ namespace BattleOfFaiths.Game.Screens
             {
                 var currentGame = context.Games.FirstOrDefault(g => g.Id == game.Id);
                 return currentGame.Money;
+            }
+        }
+
+        private int GetItemsCount(Models.Game game)
+        {
+            using (var context = new BattleOfFaithsEntities())
+            {
+                var currentGame = context.Games.FirstOrDefault(g => g.Id == game.Id);
+                return currentGame.Items.Count;
             }
         }
     }

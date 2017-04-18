@@ -12,6 +12,7 @@ namespace BattleOfFaiths.Game.Components
     public class Bar : Microsoft.Xna.Framework.Game
     {
         private Texture2D bar;
+        private Texture2D container;
         private string type;
         private Vector2 position;
         private int isEnemy;
@@ -43,10 +44,12 @@ namespace BattleOfFaiths.Game.Components
         {
             if (this.type == "mana") { 
                 bar = Content.Load<Texture2D>("Components/mbar");
+                container = Content.Load<Texture2D>("Components/mContainer");
             }
             else
             {
                 bar = Content.Load<Texture2D>("Components/hbar");
+                container = Content.Load<Texture2D>("Components/hContainer");
             }
         }
 
@@ -82,6 +85,7 @@ namespace BattleOfFaiths.Game.Components
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Draw(container, position, Color.White);
             spriteBatch.Draw(bar, sourceRect, color);
         }
     }
