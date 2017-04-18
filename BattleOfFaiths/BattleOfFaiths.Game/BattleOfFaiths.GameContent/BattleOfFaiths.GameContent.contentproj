@@ -368,11 +368,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Sprites\Items\heartFull.png">
-      <Name>heartFull</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Sprites\Items\mana100.png">
@@ -449,11 +444,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Sprites\SmallItems\heartFull.png">
-      <Name>heartFull</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Sprites\SmallItems\mana100.png">
       <Name>mana100</Name>
       <Importer>TextureImporter</Importer>
@@ -480,6 +470,20 @@
     </Compile>
     <Compile Include="Components\mContainer.jpg">
       <Name>mContainer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sprites\SmallItems\heartFull.png">
+      <Name>heartFull</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sprites\Items\heartFull.png">
+      <Name>heartFull</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

@@ -37,8 +37,8 @@ namespace BattleOfFaiths.Game.Screens
         public void Initialize()
         {
             bestGameHighScore = TakeBestGames();
-            bestGamePosition = new Vector2(20, 60);
-            bestCharPosition = new Vector2(340, 60);
+            bestGamePosition = new Vector2(120, 60);
+            bestCharPosition = new Vector2(120, 200);
             bestCharHighScore = TakeBestChar();
             backString = "Back";
             backPosition = new Vector2(screenWidth - 100, screenHeight - 60);

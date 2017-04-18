@@ -1139,3 +1139,5 @@ C:\softuni\Project7\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFa
 C:\softuni\Project7\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\obj\x86\Debug\BattleOfFaiths.Game.pdb
 C:\softuni\Project7\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Components\hContainer.xnb
 C:\softuni\Project7\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Components\mContainer.xnb
+C:\Users\steff\Desktop\Team\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Components\hContainer.xnb
+C:\Users\steff\Desktop\Team\BattleOfFaiths\BattleOfFaiths\BattleOfFaiths.Game\BattleOfFaiths.Game\bin\x86\Debug\Content\Components\mContainer.xnb

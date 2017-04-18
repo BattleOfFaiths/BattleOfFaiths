@@ -59,7 +59,6 @@ Content\Sprites\Items\SpecAttack.xnb
 Content\Sprites\Items\Attack100.xnb
 Content\Sprites\Items\def.xnb
 Content\Sprites\Items\heart50.xnb
-Content\Sprites\Items\heartFull.xnb
 Content\Sprites\Items\mana100.xnb
 Content\Sprites\Items\mana50.xnb
 Content\Backgrounds\Load.xnb
@@ -71,9 +70,10 @@ Content\Backgrounds\sho1.xnb
 Content\Sprites\SmallItems\Attack100.xnb
 Content\Sprites\SmallItems\def.xnb
 Content\Sprites\SmallItems\heart50.xnb
-Content\Sprites\SmallItems\heartFull.xnb
 Content\Sprites\SmallItems\mana100.xnb
 Content\Sprites\SmallItems\mana50.xnb
 Content\Cursor.xnb
 Content\Components\hContainer.xnb
 Content\Components\mContainer.xnb
+Content\Sprites\Items\heartFull.xnb
+Content\Sprites\SmallItems\heartFull.xnb
